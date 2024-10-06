@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Whyte Inktrap";
+  src: url("/fonts/WhyteInktrap-Bold.woff") format("woff"),
+    url("/fonts/whyte-inktrap-regular.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  /* background: #154c79; */
+  /* overflow-x: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Whyte Inktrap", sans-serif;
+}
+
+p,
+a,
+li,
+span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-decoration: none;
+  color: #17F7DE;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 1px solid  rgb(21, 21, 21);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';  
+  box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom-color: rgb(0, 231, 133);
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
