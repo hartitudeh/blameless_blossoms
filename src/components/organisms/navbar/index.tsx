@@ -20,6 +20,7 @@ const NavbarWrapper = styled.div`
   padding: 1.9rem 0rem;
   height: 9.2rem;
   width: 100%;
+  border-bottom: 1px solid #fff;
 
   @media (max-width: 900px) {
     padding: 1.4rem 0;

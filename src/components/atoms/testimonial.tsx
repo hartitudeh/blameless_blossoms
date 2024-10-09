@@ -63,12 +63,13 @@ export function Testimonials({ mobileHeight, aos }: indexProps) {
           <Flex direction="column" gap="1rem">
             <Text
               type="h1"
-              text="Our Testimonial"
+              text="Testimonials"
               weight={700}
               size={isMobile ? "3.2rem" : "5.052rem"}
               styles={{
                 lineHeight: isMobile ? "2.56rem" : "6.06rem",
                 fontFamily: "Whyte Inktrap",
+                marginBottom: "0px",
                 // width: isMobile ? "35.8rem" : "53.7rem",
               }}
             />
@@ -114,6 +115,8 @@ export function Testimonials({ mobileHeight, aos }: indexProps) {
                         style={{
                           fontSize: isMobile ? "1.4rem" : "1.7rem",
                           width: isMobile ? "100%" : "44.6rem",
+                          margin: '0px',
+                          color: "#5d5d5d"
                         }}
                       >
                         {testimonial.description}
@@ -125,6 +128,7 @@ export function Testimonials({ mobileHeight, aos }: indexProps) {
                           weight={800}
                           size={isMobile ? 16 : 18}
                           font="Whyte Inktrap"
+                          styles={{margin: "10px 0 0"}}
                         />
                         {/* <Text
                           type="h3"
@@ -136,6 +140,7 @@ export function Testimonials({ mobileHeight, aos }: indexProps) {
                           style={{
                             fontSize: isMobile ? "1.4rem" : "1.5rem",
                             fontWeight: 500,
+                            color: "#154c79"
                           }}
                         >
                           {testimonial.position}
@@ -158,7 +163,7 @@ export function Testimonials({ mobileHeight, aos }: indexProps) {
 
 const TestimonialsWrapper = styled("div")(
   ({ mobileHeight }: { mobileHeight?: string }) => ({
-    background: "#FEFCE8",
+    // background: "#FEFCE8",
     padding: "6rem 0rem 0",
     height: "58rem",
 

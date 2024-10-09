@@ -2,8 +2,10 @@
 
 // import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 // import Partner from "../../atom/partners";
-import Testimonials from "@/components/atoms/testimonial";
+// import Testimonials from "@/components/atoms/testimonial";
 import { AboutPage } from "./component/heroSection";
+import { CarouselWithModal } from "./component/carouselWithModal";
+
 // import AboutTeam from "./component/team";
 
 const AboutUsPage = () => {
@@ -13,7 +15,9 @@ const AboutUsPage = () => {
     <>
       <AboutPage />
       {/* <AboutTeam /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <CarouselWithModal />
+      
       <div
         style={{
           padding: "5rem 0", 
