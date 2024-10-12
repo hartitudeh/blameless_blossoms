@@ -9,65 +9,65 @@ import Flex from "@/components/atoms/flex";
 // import CoverImg from "../public/assets/image/header-bg.jpg";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 import SectionLayout from "@/components/atoms/sectionLayout";
-import CoverImage from "../../../../../public/assets/image/cover.png";
+import ReusableHeader from "@/components/atoms/reuseableHeader";
 
-const AboutHeader = styled.div`
-  position: relative;
-  width: 100%;
-  height: 332px;
+// const AboutHeader = styled.div`
+//   position: relative;
+//   width: 100%;
+//   height: 332px;
 
-  & img {
-    width: 100%;
-    object-fit: cover;
-    height: 300px;
-  }
+//   & img {
+//     width: 100%;
+//     object-fit: cover;
+//     height: 300px;
+//   }
 
-  & h2 {
-    position: absolute;
-    top: 55%;
-    text-transform: uppercase;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #154c79;
-    width: max-content;
-    background: ;
-    text-align: center;
-    font-weight: 700 !important;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    width: 25%;
-    font-size: 54px;
-    padding: 0px 1rem;
-    line-height: 1.5em;
-    text-shadow: 0px 4px 79px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+//   & h2 {
+//     position: absolute;
+//     top: 55%;
+//     text-transform: uppercase;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: #154c79;
+//     width: max-content;
+//     background: ;
+//     text-align: center;
+//     font-weight: 700 !important;
+//     font-size: 48px;
+//     font-style: normal;
+//     font-weight: 700;
+//     width: 25%;
+//     font-size: 54px;
+//     padding: 0px 1rem;
+//     line-height: 1.5em;
+//     text-shadow: 0px 4px 79px rgba(0, 0, 0, 0.25);
+//     border-radius: 5px;
 
-    @media screen and (max-width: 900px) {
-      font-size: 24px;
-      left: 50% !important;
-      width: 100%;
-      background: transparent;
-    }
-  }
-`;
+//     @media screen and (max-width: 900px) {
+//       font-size: 24px;
+//       left: 50% !important;
+//       width: 100%;
+//       background: transparent;
+//     }
+//   }
+// `;
 
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  // height: 300px;
-  // background: #06062a94;
-  background: linear-gradient(
-    90deg,
-    rgb(0 0 0 / 10%) 45%,
-    rgb(0 0 0 / 22%) 55%
-  );
-  @media screen and (max-width: 900px) {
-    background: #06062a94;
-  }
-`;
+// const Overlay = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   // height: 300px;
+//   // background: #06062a94;
+//   background: linear-gradient(
+//     90deg,
+//     rgb(0 0 0 / 10%) 45%,
+//     rgb(0 0 0 / 22%) 55%
+//   );
+//   @media screen and (max-width: 900px) {
+//     background: #06062a94;
+//   }
+// `;
 
 const AboutMeWrapper = styled.div`
   background: #154c79;
@@ -91,7 +91,7 @@ export const AboutPage = () => {
   const { isMobile } = useScreenResolution();
   return (
     <>
-      <AboutHeader
+      {/* <AboutHeader
         style={{
           height: isMobile ? "160px" : "250px",
         }}
@@ -104,7 +104,9 @@ export const AboutPage = () => {
           transform="uppercase"
           styles={{ width: "max-content", fontFamily: "Whyte Inktrap" }}
         />
-      </AboutHeader>
+      </AboutHeader> */}
+      <ReusableHeader text="About Me" />
+
       <AboutMeWrapper>
         <SectionLayout height="100%" data-aos="fade-up">
           <Flex

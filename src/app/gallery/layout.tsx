@@ -17,7 +17,6 @@ export default function ChatLayout({ children }: layoutProps) {
       {children}
       {/* <Footer /> */}
       <FooterSection />
-
     </>
   );
 }
