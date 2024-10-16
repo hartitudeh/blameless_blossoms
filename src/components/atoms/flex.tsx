@@ -1,9 +1,9 @@
 "use client";
 
-import React, { CSSProperties } from "react";
+import React, { forwardRef, CSSProperties } from "react";
 import styled from "styled-components";
 
-interface flexProps {
+interface FlexProps {
   children: React.ReactNode;
   justify?:
     | "center"
@@ -47,72 +47,78 @@ interface flexProps {
   border?: string;
   height?: string;
   cursor?: string;
-  ref?: any;
-  onClick?: (e: any) => void;
-  aos?: string;
+  flexRef?: React.Ref<HTMLDivElement>;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const FlexWrapper = styled.div`
   width: 100%;
 `;
 
-export const Flex: React.FC<flexProps> = ({
-  children,
-  justify,
-  align,
-  gap,
-  direction,
-  margin,
-  padding,
-  background,
-  width,
-  height,
-  borderRadius,
-  id,
-  overflow,
-  overflowY,
-  overflowX,
-  wrap,
-  border,
-  borderBottom,
-  alignSelf,
-  cursor,
-  ref,
-  styles,
-  onClick,
-  aos,
-}) => {
-  return (
-    <FlexWrapper
-      data-aos={aos}
-      ref={ref}
-      id={id}
-      style={{
-        margin: margin,
-        display: "flex",
-        justifyContent: justify,
-        alignItems: align,
-        gap: gap,
-        cursor,
-        flexDirection: direction,
-        background: background,
-        width: width,
-        overflow: overflow || "unset",
-        overflowY: overflowY,
-        overflowX: overflowX,
-        borderRadius: borderRadius,
-        border: border,
-        padding: padding,
-        flexWrap: wrap,
-        height: height,
-        alignSelf: alignSelf,
-        borderBottom: borderBottom,
-        ...styles,
-      }}
-      onClick={onClick}
-    >
-      {children}
-    </FlexWrapper>
-  );
-};
+export const Flex = forwardRef<HTMLDivElement, FlexProps>(
+  (
+    {
+      children,
+      justify,
+      align,
+      gap,
+      direction,
+      margin,
+      padding,
+      background,
+      width,
+      height,
+      borderRadius,
+      id,
+      overflow,
+      overflowY,
+      overflowX,
+      wrap,
+      border,
+      borderBottom,
+      alignSelf,
+      cursor,
+      flexRef,
+      styles,
+      onClick,
+    },
+    ref
+  ) => {
+    return (
+      <FlexWrapper
+        ref={flexRef || ref}
+        id={id}
+        style={{
+          margin,
+          display: "flex",
+          justifyContent: justify,
+          alignItems: align,
+          gap,
+          cursor,
+          flexDirection: direction,
+          background,
+          width,
+          overflow: overflow || "unset",
+          overflowY,
+          overflowX,
+          borderRadius,
+          border,
+          padding,
+          flexWrap: wrap,
+          height,
+          alignSelf,
+          borderBottom,
+          ...styles,
+        }}
+        onClick={onClick}
+      >
+        {children}
+      </FlexWrapper>
+    );
+  }
+);
+
+// Set the display name for easier debugging
+Flex.displayName = "Flex";
+
 export default Flex;
