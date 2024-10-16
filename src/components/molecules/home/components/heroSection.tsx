@@ -7,7 +7,7 @@ import Link from "@/components/atoms/link";
 import Text from "@/components/atoms/text";
 import styled from "styled-components";
 import HomeImg from "../../../../../public/assets/image/imisi.png";
-import HomeImgM from "../../../../../public/assets/image/imisiImgM.png";
+import HomeImgM from "../../../../../public/assets/image/imisiM.png";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 // import { LuCheckCircle2 } from "react-icons/lu";
 
@@ -18,9 +18,11 @@ const HomePageWrapper = styled.div`
   height: 70vh;
   max-height: 86rem;
   background: #154c79;
+  // background: #421416;
   // position: relative;
   // top: 10.3rem;
   padding-top: 5vh;
+
 
   // padding: 10rem 12rem;
 
@@ -28,62 +30,19 @@ const HomePageWrapper = styled.div`
 
   @media (max-width: 900px) {
     overflow: hidden;
-    padding: 0rem;
+    padding-bottom: 5rem;
     height: 100%;
     max-height: 100%;
     margin-top: -1rem;
   }
 `;
 
-// const FlexWrapper = styled.div`
-//   position: absolute;
-//   right: 11%;
-//   bottom: 7%;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   gap: 1rem;
-
-//   @media (max-width: 900px) {
-//     bottom: 7%;
-//     right: 19%;
-//   }
-// `;
-
-// const Box = styled.div`
-//   background: #ffffffd6;
-//   padding: 1.5rem 2.5rem;
-//   border-radius: 1rem;
-//   width: 22.6rem;
-//   // height: 7.2rem;
-
-//   &:nth-child(2) {
-//     right: 40% !important;
-//     position: relative;
-
-//     @media (max-width: 900px) {
-//       width: 15rem;
-//       padding: 1rem 1.5rem;
-//     }
-//   }
-
-//   @media (max-width: 900px) {
-//     width: 15rem;
-//     padding: 1rem 1rem;
-//   }
-// `;
-
 const HeroImageSection = styled.div`
-  //   background: #aeffdd;
   border-top-left-radius: 5rem;
-  // height: 100%;
   width: 100%;
-  // position: relative;
-  // right: -10%;
 
   @media (max-width: 900px) {
     margin-top: 3rem;
-    // width: 90%;
     height: 400px;
     left: 25%;
     top: 10%;
@@ -93,60 +52,38 @@ const HeroImageSection = styled.div`
     position: relative;
     bottom: -7.45%;
     left: -40%;
-    // width: 399px;
     height: 95% !important;
 
     @media (max-width: 900px) {
       left: -24%;
     }
   }
+
+
 `;
-// const HomeText = styled.h1`
-//   color: #edfff7;
-//   font-family: Whyte Inktrap;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 5.734rem;
-//   width: 90%;
-//   margin-bottom: 0px;
-//   line-height: 8rem;
-//   padding-top: 4rem;
-//   z-index: 1000;
-//   letter-spacing: -1.064px;
-//   @media (max-width: 900px) {
-//     font-size: 38px;
-//     padding-top: 0;
-//     line-height: 38px;
-//     letter-spacing: -1.064px;
-//     width: 100%;
-//     margin-top: 1rem;
-//   }
-// `;
 
 export const HomeComponent = () => {
   const { isMobile } = useScreenResolution();
   return (
     <HomePageWrapper>
-      <SectionLayout height="100%" data-aos="fade-up">
+      <SectionLayout height="100%" data-aos={isMobile ? "" : "fade-up"}>
         <Flex
           justify="space-between"
           height="100%"
-          gap="10rem"
+          gap={isMobile ? "1rem" : "10rem"}
           direction={isMobile ? "column" : "row"}
           styles={{ position: "relative" }}
         >
           <HeroImageSection>
-            {/* <Flex justify={isMobile ? "center" : "flex-start"} height="100%"> */}
             <Image
               src={isMobile ? HomeImgM : HomeImg}
               alt=""
-              styles={{ position: "relative", left: "10px" }}
-              // width={isMobile ? 379 : 850}
+              styles={{ position: "relative", left: isMobile ? "1px" : "10px" }}
+
             />
-            {/* </Flex> */}
           </HeroImageSection>
           <Flex
-            aos="fade-up"
+            aos={isMobile ? "" : "fade-up"}
             direction="column"
             justify="center"
             gap="2rem"

@@ -214,7 +214,7 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "50%",
+  width: window.innerWidth <= 900 ? "90%" : "50%",
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 1.5,
@@ -269,7 +269,7 @@ const BlogPage = () => {
           fontFamily: "Whyte Inktrap",
         }}
       />
-      <Flex justify="space-between">
+      <Flex justify="space-between" direction={isMobile ? "column" : "row"}>
         <BlogPostWrapper>
           {blogPosts.map((post) => (
             <PostCard key={post.id} onClick={() => handleOpen(post)}>

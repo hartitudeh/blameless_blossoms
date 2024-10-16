@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Logo from "../../../../public/assets/image/logo/logo.svg";
+import Logo from "../../../../public/assets/image/logo/logo.png";
 import SectionLayout from "@/components/atoms/sectionLayout";
 import Flex from "@/components/atoms/flex";
 import Image from "@/components/atoms/image";
@@ -42,7 +42,7 @@ const Navbar = () => {
           <Flex justify="space-between" width="100%">
             <Flex width="20%" align="center" cursor="pointer">
               <Link href="/">
-                <Image src={Logo} alt="logo" height={36} width={93} />
+                <Image src={Logo} alt="logo" height={60} width={128} />
               </Link>
             </Flex>
             <Flex gap="3.4rem" justify="flex-end" align="center" width="80%">

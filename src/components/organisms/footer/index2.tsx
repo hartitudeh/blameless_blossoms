@@ -99,14 +99,14 @@ const FooterSection = () => {
         margin="0 auto"
         padding={isMobile ? "3rem 1.5rem 0 1.5rem" : "1rem"}
       >
-        <Flex direction="row" justify="space-between">
-          <Flex direction="column" justify="flex-start" gap="2.5rem">
+        <Flex direction={isMobile ? "column" : "row"} justify="space-between" gap={isMobile ? "5rem" : "0"}>
+          <Flex direction="column" justify="flex-start" gap={isMobile ? "5rem" : "2.5rem"} align={isMobile ? "center" : "flex-start"}>
             <Link href="/">
               <Image
-                src="/assets/image/logo/logo.svg"
+                src="/assets/image/logo/logo.png"
                 alt="logo"
-                width={142}
-                height={43}
+                width={128}
+                height={60}
               />
             </Link>
 
@@ -126,7 +126,7 @@ const FooterSection = () => {
             </Grid>
           </Flex>
 
-          <Flex direction="column" gap="2rem">
+          <Flex direction={isMobile ? "row" : "column"} gap="2rem">
             <div className="recentBooks">
               <Text
                 type="h3"

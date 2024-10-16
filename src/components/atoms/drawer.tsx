@@ -7,7 +7,7 @@ import Flex from "./flex";
 import Image from "./image";
 import Link from "./link";
 import Text from "./text";
-import Logo from "../../../public/assets/image/logo/logo.svg";
+import LogoM from "../../../public/assets/image/logo/logoM.png";
 import { LiaTimesSolid } from "react-icons/lia";
 import { Divider } from "./divider";
 import { FcMenu } from "react-icons/fc";
@@ -72,7 +72,7 @@ export default function TemporaryDrawer() {
             styles={{ width: "100%" }}
           >
             <Link href="/">
-              <Image src={Logo} width={59.42} height={23} alt="" />
+              <Image src={LogoM} width={59.42} height={23} alt="" />
             </Link>
             <Button
               onClick={toggleDrawer(anchor, false)}
@@ -214,7 +214,7 @@ export default function TemporaryDrawer() {
             styles={{ padding: "0 0 1rem 1rem" }}
           >
             <Link href="/">
-              <Image src={Logo} width={69.42} height={33} alt="" />
+              <Image src={LogoM} width={69.42} height={33} alt="" />
             </Link>
             <Button
               onClick={toggleDrawer(anchor, true)}
