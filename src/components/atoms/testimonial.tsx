@@ -155,7 +155,7 @@ const TestimonialsWrapper = styled("div")(
   })
 );
 
-const SliderWrapper = styled("div", {
+export const SliderWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile" && prop !== "arrowPositionFromTop",
 })<BoxProps & { isMobile: boolean; arrowPositionFromTop: string }>(
   ({ isMobile, arrowPositionFromTop }) => ({
@@ -184,6 +184,7 @@ const SliderWrapper = styled("div", {
   })
 );
 
+
 const TestimonialCard = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
 })<BoxProps & { isMobile: boolean }>(({}) => ({
@@ -201,4 +202,5 @@ const TestimonialCard = styled("div", {
   },
 }));
 
-export default Testimonials;
+export default Testimonials ;
+;
