@@ -1,3 +1,5 @@
+
+import './globals.css'; 
 import LoaderLayout from "@/components/organisms/loader/loader";
 import StyledComponentsRegistry from "@/lib/registry";
 import "aos/dist/aos.css";

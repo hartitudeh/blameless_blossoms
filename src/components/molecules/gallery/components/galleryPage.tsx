@@ -15,6 +15,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ReusableHeader from "@/components/atoms/reuseableHeader";
 import SectionLayout from "@/components/atoms/sectionLayout";
+import Image from "@/components/atoms/image";
 
 // Define a union type for the possible categories
 type ImageCategory =
@@ -150,14 +151,10 @@ const GalleryPage = () => {
               : imageData[selectedTab]
             ).map((image, index) => (
               <Grid item xs={12} sm={6} md={4} key={image.id}>
-                <img
+                <Image
                   src={image.src}
                   alt={`Category ${image.category}`}
-                  style={{
-                    width: "100%",
-                    cursor: "pointer",
-                    borderRadius: "8px",
-                  }}
+borderRadius="8px"
                   onClick={() => handleOpenModal(image, index)}
                 />
               </Grid>
@@ -169,10 +166,11 @@ const GalleryPage = () => {
             <StyledModalBox>
               {currentImage && (
                 <Box>
-                  <img
+                  <Image
                     src={currentImage.src}
                     alt={`Full view of ${currentImage.category}`}
-                    style={{ width: "100%", borderRadius: "8px" }}
+                    // width={500}
+                    borderRadius="8px"
                   />
                   <Box display="flex" justifyContent="space-between" mt={2}>
                     <IconButton onClick={handlePreviousImage}>
