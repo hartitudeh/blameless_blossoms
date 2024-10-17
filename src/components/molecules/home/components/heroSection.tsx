@@ -83,7 +83,6 @@ export const HomeComponent = () => {
             />
           </HeroImageSection>
           <Flex
-            aos="fade-up"
             direction="column"
             justify="center"
             gap="2rem"
