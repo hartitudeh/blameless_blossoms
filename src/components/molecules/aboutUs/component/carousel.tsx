@@ -1,69 +1,60 @@
 import { BoxProps, styled } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import arrowLeft from "../../../../../public/assets/image/arrowLeft.svg";
 import arrowRight from "../../../../../public/assets/image/arrowRight.svg";
 import Flex from "@/components/atoms/flex";
 import SectionLayout from "@/components/atoms/sectionLayout";
-interface CarouselsProps {
-  isMobile: boolean;
-  testimonials: testimonial[];
+import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
+
+interface CarouselProps {
+  testimonials: Testimonial[];
 }
 
-interface testimonial {
+interface Testimonial {
   id: number;
   name: string;
   position: string;
   description: string;
   avatar: StaticImageData;
 }
-const settings = (
-  isMobile: boolean,
-  setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
-) => {
-  return {
-    slidesToShow: 2,
-    // slidesToScroll: 2,
-    slidesToRow: 1,
-    initialSlide: 0,
-    speed: 1000,
-    slidesPerRow: 1,
-    adaptiveHeight: true,
-    accessibility: true,
-    infinite: false,
-    // centerMode: true,
-    // centerPadding: "20%",
-    beforeChange: (_: number, next: number) => setCurrentSlide(next),
-    prevArrow: (
-      <div>
-        <Image src={arrowLeft} alt="previous" />
-      </div>
-    ),
-    nextArrow: (
-      <div>
-        <Image src={arrowRight} alt="next" />
-      </div>
-    ),
-  };
-};
-export const MobileCarousel: React.FC<CarouselsProps> = ({
-  testimonials,
-  isMobile,
-}) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+
+const settings = (isMobile: boolean) => ({
+  slidesToShow: isMobile ? 1 : 2,  // Adjust slides based on screen size
+  slidesToRow: 1,
+  initialSlide: 0,
+  speed: 1000,
+  slidesPerRow: 1,
+  adaptiveHeight: true,
+  accessibility: true,
+  infinite: false,
+  prevArrow: (
+    <div>
+      <Image src={arrowLeft} alt="previous" />
+    </div>
+  ),
+  nextArrow: (
+    <div>
+      <Image src={arrowRight} alt="next" />
+    </div>
+  ),
+});
+
+export const MobileCarousel: React.FC<CarouselProps> = ({ testimonials }) => {
+  const { isMobile } = useScreenResolution();
+
   return (
     <SliderWrapper
       style={{
-        margin: isMobile ? "2rem  0 0" : "10rem 0",
-
+        margin: isMobile ? "2rem 0 0" : "10rem 0",
         paddingBottom: "10rem",
       }}
       isMobile={isMobile}
       data-aos="fade-up"
     >
       <SectionLayout>
-        <Slider {...settings(isMobile, setCurrentSlide)}>
+        <Slider {...settings(isMobile)}>
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}
@@ -77,7 +68,6 @@ export const MobileCarousel: React.FC<CarouselsProps> = ({
                     alt="testimonial"
                     width={60}
                   />
-
                   <Flex direction="column" gap="1.5rem" justify="space-between">
                     <p style={{ fontSize: isMobile ? "1.6rem" : "2rem", width: isMobile ? "100%" : "44.6rem" }}>
                       {testimonial.description}
@@ -99,35 +89,29 @@ export const MobileCarousel: React.FC<CarouselsProps> = ({
   );
 };
 
-const arrowStyles = (isMobile: boolean) => {
-  return {
-    top: isMobile ? "115%!important" : "180% !important",
-    cursor: "pointer",
-    border: "1px solid #505050",
-    borderRadius: "50%",
-    // padding: "1rem",
-    height: isMobile ? "5rem" : "6rem",
-    width: isMobile ? "5rem" : "6rem",
-    display: "flex!important",
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 10,
-    // height: '100%',
-    "&>img": {
-      width: "10px",
-    },
-
-    "&:before": {
-      width: 0,
-      content: "''",
-    },
-
-    "&.slick-disabled": {
-      border: "none!important",
-      cursor: "not-allowed",
-    },
-  };
-};
+const arrowStyles = (isMobile: boolean) => ({
+  top: isMobile ? "115%!important" : "180% !important",
+  cursor: "pointer",
+  border: "1px solid #505050",
+  borderRadius: "50%",
+  height: isMobile ? "5rem" : "6rem",
+  width: isMobile ? "5rem" : "6rem",
+  display: "flex!important",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 10,
+  "& > img": {
+    width: "10px",
+  },
+  "&:before": {
+    width: 0,
+    content: "''",
+  },
+  "&.slick-disabled": {
+    border: "none!important",
+    cursor: "not-allowed",
+  },
+});
 
 const SliderWrapper = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
@@ -151,9 +135,8 @@ const SliderWrapper = styled("div", {
     "& div": {
       display: "flex",
       height: "100%",
-      minWidth: isMobile ? "100%!important" : "100%",
+      minWidth: "100%!important",
     },
-
     "&:first-of-type": {
       marginLeft: isMobile ? "2rem!important" : "0",
     },
@@ -169,18 +152,17 @@ const SliderWrapper = styled("div", {
   ".slick-slide:first-of-type": {
     marginLeft: "0rem!important",
   },
-})) as any;
+}));
 
 const TestimonialCard = styled("div", {
   shouldForwardProp: (prop) => prop !== "isMobile",
 })<BoxProps & { isMobile: boolean }>(({ isMobile }) => ({
   cursor: "move",
   background: "transparent",
-  padding: isMobile ? "0rem" : "0rem",
+  padding: "0rem",
   borderRadius: "8px",
   overflow: "hidden",
   height: "max-content",
-  //   width: "40%!important",
   "& h3": {
     fontWeight: 700,
     color: "#4F4F4F",
@@ -194,6 +176,6 @@ const TestimonialCard = styled("div", {
     color: "#707070",
     fontWeight: 400,
   },
-})) as React.FC<BoxProps & { isMobile: boolean }>;
+}));
 
 export default MobileCarousel;

@@ -3,6 +3,7 @@
 import { ReactNode, useState } from "react";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 import { useServerInsertedHTML } from "next/navigation";
+
 export default function StyledComponentsRegistry({
   children,
 }: {
@@ -12,8 +13,8 @@ export default function StyledComponentsRegistry({
 
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
-    styledComponentsStyleSheet.instance.clearTag;
-    return <>{styles}</>
+    styledComponentsStyleSheet.instance.clearTag(); // Correctly call clearTag method
+    return <>{styles}</>;
   });
 
   if (typeof window !== "undefined") return <>{children}</>;

@@ -10,8 +10,7 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import { Theme } from "@mui/material/styles";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles"; // Ensure correct import
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ReusableHeader from "@/components/atoms/reuseableHeader";
@@ -68,8 +67,8 @@ const imageData: Record<ImageCategory, { id: number; src: string; category: stri
   ],
 };
 
-// Corrected Styled Modal Box
-const StyledModalBox = styled(Box)(({ theme }: { theme: Theme }) => ({
+// Styled Modal Box
+const StyledModalBox = styled(Box)(({ theme }) => ({
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -77,7 +76,7 @@ const StyledModalBox = styled(Box)(({ theme }: { theme: Theme }) => ({
   width: "80%",
   maxWidth: "600px",
   backgroundColor: "#fff",
-  boxShadow: 24,
+  boxShadow: theme.shadows[4], // Use a valid shadow index
   padding: theme.spacing(2),
 }));
 
@@ -124,30 +123,24 @@ const GalleryPage = () => {
       <ReusableHeader text="Gallery" />
       <SectionLayout>
         <Box sx={{ width: "100%", padding: 2 }}>
-        <Box
-          sx={{
-            overflowX: "auto",
-            display: "flex",
-            whiteSpace: "nowrap",
-            padding: "8px 0",
-          }}
-        >
-          <Tabs value={selectedTab} onChange={handleTabChange} centered>
-            <Tab label="All" value="All" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-            <Tab
-              label="Worship/Music/Ministry"
-              value="Worship/Music/Ministry" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }}
-            />
-            <Tab label="Education" value="Education" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-            <Tab
-              label="Public Speaking/Events"
-              value="Public Speaking/Events" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }}
-            />
-            <Tab label="Publishing" value="Publishing" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-            <Tab label="Communication Coach" value="Communication Coach" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-            <Tab label="Health" value="Health" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-            <Tab label="Community Work" value="Community Work" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
-          </Tabs>
+          <Box
+            sx={{
+              overflowX: "auto",
+              display: "flex",
+              whiteSpace: "nowrap",
+              padding: "8px 0",
+            }}
+          >
+            <Tabs value={selectedTab} onChange={handleTabChange} centered>
+              <Tab label="All" value="All" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Worship/Music/Ministry" value="Worship/Music/Ministry" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Education" value="Education" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Public Speaking/Events" value="Public Speaking/Events" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Publishing" value="Publishing" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Communication Coach" value="Communication Coach" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Health" value="Health" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+              <Tab label="Community Work" value="Community Work" disableRipple sx={{ fontSize: "1.2rem", color: "#154c79", "&.Mui-selected": { color: "#154c79" } }} />
+            </Tabs>
           </Box>
 
           {/* Image Grid */}
@@ -175,33 +168,24 @@ const GalleryPage = () => {
           <Modal open={openModal} onClose={handleCloseModal}>
             <StyledModalBox>
               {currentImage && (
-                <>
+                <Box>
                   <img
                     src={currentImage.src}
-                    alt="Full Image"
+                    alt={`Full view of ${currentImage.category}`}
                     style={{ width: "100%", borderRadius: "8px" }}
                   />
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginTop: 2,
-                    }}
-                  >
+                  <Box display="flex" justifyContent="space-between" mt={2}>
                     <IconButton onClick={handlePreviousImage}>
                       <ArrowBackIcon />
                     </IconButton>
-                    <Typography
-                      variant="h6"
-                      sx={{ flexGrow: 1, textAlign: "center" }}
-                    >
-                      {currentImage.category}
-                    </Typography>
                     <IconButton onClick={handleNextImage}>
                       <ArrowForwardIcon />
                     </IconButton>
                   </Box>
-                </>
+                  <Typography variant="subtitle1" mt={2}>
+                    {currentImage.category}
+                  </Typography>
+                </Box>
               )}
             </StyledModalBox>
           </Modal>

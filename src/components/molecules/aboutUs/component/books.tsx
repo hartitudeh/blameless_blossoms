@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   margin-top: 8rem;
   height: fit-content;
 
-
   @media (max-width: 900px) {
     height: 66rem;
   }
@@ -23,37 +22,36 @@ const MyBooks = () => {
       id: 1,
       title: "Specific To You",
       description:
-        "Guaranteed remote internship in field of your choice at global companies.",
+        "Guaranteed remote internship in the field of your choice at global companies.",
     },
-
     {
       id: 2,
       title: "Measurable Learning",
       description:
         "Over 100 courses by industry executives to succeed in your internship.",
     },
-
     {
       id: 3,
       title: "Readiness In Career",
       description:
-        "Career readiness services such as resume writing and networking with industry.",
+        "Career readiness services such as resume writing and networking with the industry.",
     },
     {
-      id: 3,
+      id: 4, // Changed to unique id
       title: "Accessible Delivery",
       description:
         "Hybrid and bite-size 15-min content on mobile and web to learn anywhere and anytime.",
     },
     {
-      id: 3,
+      id: 5, // Changed to unique id
       title: "Top Ranked Universities",
       description:
-        "Comprehensive admission services from coaches, who have studied at Harvard, UCLA and MIT.",
+        "Comprehensive admission services from coaches who have studied at Harvard, UCLA, and MIT.",
     },
   ];
+
   return (
-    <Wrapper data-aos='fade-up'>
+    <Wrapper data-aos="fade-up">
       <Flex
         direction="column"
         justify="center"
@@ -74,7 +72,7 @@ const MyBooks = () => {
             width: isMobile ? "100%" : "80.8rem",
           }}
         />
-        
+
         <Text
           type="p"
           text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -82,7 +80,7 @@ const MyBooks = () => {
           eligendi. Quia dolore quae, rerum amet consequuntur aut suscipit at 
           temporibus. Molestiae, voluptatum?"
           color="#5D5D5D"
-          font="Open sans"
+          font="Open Sans"
           weight={400}
           size={isMobile ? "1.4rem" : "1.6rem"}
           styles={{
@@ -120,7 +118,7 @@ const MyBooks = () => {
                 type="p"
                 text={book.description}
                 color="#5D5D5D"
-                font="Open sans"
+                font="Open Sans"
                 weight={400}
                 size="1.6rem"
                 styles={{ lineHeight: "2.179rem", textAlign: "center" }}
@@ -134,3 +132,5 @@ const MyBooks = () => {
 };
 
 export default MyBooks;
+
+

@@ -83,7 +83,7 @@ export const HomeComponent = () => {
             />
           </HeroImageSection>
           <Flex
-            aos={isMobile ? "" : "fade-up"}
+            aos="fade-up"
             direction="column"
             justify="center"
             gap="2rem"
