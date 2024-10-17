@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  /* background: #154c79; */
+  background: #fff;
   /* overflow-x: hidden; */
 
 }
@@ -62,8 +62,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: "Whyte Inktrap", sans-serif;
+  color: #222 ;
 }
 
 p,
