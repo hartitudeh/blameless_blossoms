@@ -6,8 +6,8 @@ import Image from "@/components/atoms/image";
 import Link from "@/components/atoms/link";
 import Text from "@/components/atoms/text";
 import styled from "styled-components";
-import HomeImg from "../../../../../public/assets/image/imisi.png";
-import HomeImgM from "../../../../../public/assets/image/imisiM.png";
+// import HomeImg from "../../../../../public/assets/image/imisi.png";
+import HomeImgM from "../../../../../public/assets/image/logo/logoM.png";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 // import { LuCheckCircle2 } from "react-icons/lu";
 
@@ -39,7 +39,7 @@ const HomePageWrapper = styled.div`
 
 const HeroImageSection = styled.div`
   border-top-left-radius: 5rem;
-  width: 100%;
+  width: 40%;
 
   @media (max-width: 900px) {
     margin-top: 3rem;
@@ -49,14 +49,15 @@ const HeroImageSection = styled.div`
   }
 
   & img {
-    position: relative;
-    bottom: -7.45%;
-    left: -40%;
-    height: 95% !important;
+    // position: relative;
+    // bottom: -7.45%;
+    // left: -40%;
+    height: 100% !important;
+    width: 100%;
 
-    @media (max-width: 900px) {
-      left: -24%;
-    }
+    // @media (max-width: 900px) {
+    //   left: -24%;
+    // }
   }
 
 
@@ -70,16 +71,18 @@ export const HomeComponent = () => {
         <Flex
           justify="space-between"
           height="100%"
-          gap={isMobile ? "1rem" : "10rem"}
+          align="center"
+          gap={isMobile ? "1rem" : "5rem"}
           direction={isMobile ? "column" : "row"}
           styles={{ position: "relative" }}
         >
           <HeroImageSection>
             <Image
-              src={isMobile ? HomeImgM : HomeImg}
+              src={HomeImgM}
               alt=""
-              styles={{ position: "relative", left: isMobile ? "1px" : "10px" }}
-
+              // styles={{ position: "relative", left: isMobile ? "1px" : "10px" }}
+              height={700}
+              width={700}
             />
           </HeroImageSection>
           <Flex
@@ -91,7 +94,7 @@ export const HomeComponent = () => {
           >
             <Text
               type="h1"
-              text="Dr. Ayooluwa Adekoya"
+              text="BLAMELESS BLOSSOM"
               weight={500}
               size={isMobile ? "3.63rem" : "5.734rem"}
               styles={{
