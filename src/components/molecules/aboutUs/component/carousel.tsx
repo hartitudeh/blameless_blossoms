@@ -41,7 +41,7 @@ const settings = (isMobile: boolean) => ({
   ),
 });
 
-export const MobileCarousel: React.FC<CarouselProps> = ({ testimonials }) => {
+export const MobileCarousel: React.FC<CarouselProps> = ({  testimonials }) => {
   const { isMobile } = useScreenResolution();
 
   return (

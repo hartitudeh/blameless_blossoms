@@ -84,14 +84,14 @@ const CardImage = styled.img`
 
 // Card Title
 const CardTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #edfff7;
 `;
 
 // Card Description
 const CardDescription = styled.p`
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #17f7de;
 `;
 
@@ -238,10 +238,10 @@ export const CarouselWithModal = () => {
                 alt={selectedCard.title}
                 styles={{ marginBottom: "1rem", height: "auto", maxHeight: "250px", objectFit: "cover", borderRadius: "5px"  }}
               />
-              <Typography variant="h4" component="h2" gutterBottom>
+              <Typography variant="h4" component="h2" gutterBottom sx={{color: "#154c79", fontWeight: "600", fontFamily: "Whyte Inktrap", fontSize: "2.5rem"}}>
                 {selectedCard.title}
               </Typography>
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="body1" gutterBottom sx={{color: "#222", fontSize: "1.5rem",}}> 
                 {selectedCard.description2}
               </Typography>
             </>

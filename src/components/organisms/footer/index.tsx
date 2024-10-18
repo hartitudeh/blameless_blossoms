@@ -104,7 +104,7 @@ const FooterSection = () => {
         padding={isMobile ? "0rem 1.5rem 0 1.5rem" : "1rem"}
       >
         <Flex direction={isMobile ? "column" : "row"} justify="space-between" gap={isMobile ? "3rem" : "0"}>
-          <Flex direction={isMobile ? "row" : "column"} justify="flex-start" gap={isMobile ? "3rem" : "2.5rem"} align="flex-start">
+          <Flex direction={isMobile ? "row" : "column"} justify="flex-start" gap={isMobile ? "3rem" : "2.5rem"} align={isMobile ? "center" : "flex-start"}>
             <Link href="/">
               <Image
                 src="/assets/image/logo/logo.png"

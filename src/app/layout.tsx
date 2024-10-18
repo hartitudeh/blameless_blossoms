@@ -12,7 +12,7 @@ import "../styles/globals.css";
 export const metadata: Metadata = {
   title: "Blameless Blossom",
   description:
-    "Exclusive study, abroad scholarship and online degreees for you!",
+    "Blameless Blossom is exclusive!",
 };
 
 export default function RootLayout({

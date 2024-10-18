@@ -48,7 +48,7 @@ const HeroImageSection = styled.div`
     margin-top: 2rem;
     width: 100%;
     height: auto;
-    right: 53%;
+    right: 38%;
     top: 10%;
   }
 
@@ -76,9 +76,9 @@ export const HomeComponent = () => {
           justify="space-between"
           height="100%"
           align="center"
-          gap={isMobile ? "1rem" : "5rem"}
+          gap={isMobile ? "5rem" : "5rem"}
           direction={isMobile ? "column" : "row"}
-          styles={{ position: "relative" }}
+          styles={{ position: "relative", textAlign: isMobile ? "center" : "left" }}
         >
           <HeroImageSection>
             <Image
@@ -98,12 +98,13 @@ export const HomeComponent = () => {
               type="h1"
               text="BLAMELESS BLOSSOM"
               weight={500}
-              size={isMobile ? "3.63rem" : "5.734rem"}
+              size={isMobile ? "4.63rem" : "5.734rem"}
               styles={{
-                lineHeight: isMobile ? "5.8rem" : "8rem",
+                lineHeight: isMobile ? "4.8rem" : "8rem",
                 letterSpacing: "-2.8%",
                 fontFamily: "Whyte Inktrap",
                 marginBottom: "0px",
+                textAlign: isMobile ? "center" : "left",
               }}
               color="#edfff7"
               width={isMobile ? "100%" : "100%"}

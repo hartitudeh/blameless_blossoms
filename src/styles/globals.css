@@ -101,7 +101,7 @@ span {
     height: 40px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-bottom-color: rgb(0, 231, 133);
+    border-bottom-color: #154c79;
 }
     
 @keyframes rotation {

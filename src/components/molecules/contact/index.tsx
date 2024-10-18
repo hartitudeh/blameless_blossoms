@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Text from "@/components/atoms/text";
@@ -6,13 +6,26 @@ import SectionLayout from "@/components/atoms/sectionLayout";
 import styled from "styled-components";
 import ReusableHeader from "@/components/atoms/reuseableHeader";
 import Flex from "@/components/atoms/flex";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+import { Grid } from "@/components/atoms/grid";
+import Link from "@/components/atoms/link";
+import { BsFacebook, BsTwitter } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
+import { ImLinkedin } from "react-icons/im";
 
 // Contact form styles
 const ContactWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+  flex-direction: row;
   padding: 5rem 0;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const ContactForm = styled.form`
@@ -20,6 +33,10 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const InputField = styled.input`
@@ -58,45 +75,28 @@ const SubmitButton = styled.button`
   }
 `;
 
-// Contact Info Section
-// const ContactInfo = styled.div`
-//   width: 35%;
-//   background-color: #154c79;
-//   border-radius: 25px;
-//   padding: 2rem;
-//   color: #fff;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 1rem;
-// `;
-
-const InfoItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-
-  i {
-    font-size: 1.5rem;
-  }
-`;
-
-const SocialIcons = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-top: 2rem;
-
-  a {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #8f10b7;
-    }
-  }
-`;
+const footerIcons = [
+  {
+    id: 1,
+    icon: <BsFacebook size="3rem" color="#edfff7" />,
+    url: "https://www.facebook.com/AyooluwaAdekoya?mibextid=ZbWKwL",
+  },
+  {
+    id: 2,
+    icon: <BsTwitter size="3rem" color="#edfff7" />,
+    url: "https://x.com/AyooluwaAdekoya?t=CDCQZDAh4Iz3nnoVlZM6jg&s=08",
+  },
+  {
+    id: 3,
+    icon: <AiFillInstagram size="3rem" color="#edfff7" />,
+    url: "https://www.instagram.com/ayooluwaadekoya?utm_source=qr&igsh=MXZsZTh2ZXU3ODUxYw==",
+  },
+  {
+    id: 4,
+    icon: <ImLinkedin size="3rem" color="#edfff7" />,
+    url: "https://ng.linkedin.com/in/ayooluwa-adekoya-32b106193",
+  },
+];
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -107,7 +107,9 @@ const ContactPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -117,25 +119,24 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-  
-    const res = await fetch('/api/contact', {
-      method: 'POST',
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
-  
+
     setIsLoading(false);
-  
+
     if (res.ok) {
-      setSuccessMessage('Your message was sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
+      setSuccessMessage("Your message was sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
     } else {
-      setSuccessMessage('Something went wrong. Please try again.');
+      setSuccessMessage("Something went wrong. Please try again.");
     }
   };
-  
 
   return (
     <>
@@ -145,7 +146,7 @@ const ContactPage = () => {
           <ContactForm onSubmit={handleSubmit}>
             <Text
               type="h3"
-              text="Feel Free to contact us any time. We will get back to you as soon as we can!"
+              text="Feel Free to contact us any time!"
               size="2.5rem"
               color="#666"
               styles={{ marginBottom: "1.5rem" }}
@@ -178,29 +179,49 @@ const ContactPage = () => {
               {isLoading ? "Sending..." : "Send"}
             </SubmitButton>
 
-            {successMessage && <Text type="p" text={successMessage} color="#28a745" />}
+            {successMessage && (
+              <Text type="p" text={successMessage} color="#28a745" />
+            )}
           </ContactForm>
 
-          <Flex direction="column" background="#154c79" gap="2rem" padding="2rem" borderRadius="1.5rem">
-            <Text type="h4" text="Contact Info" size="1.5rem" />
-            <InfoItem>
-              <i className="fas fa-headset"></i>
-              <span>+91 8009 054294</span>
-            </InfoItem>
-            <InfoItem>
-              <i className="fas fa-envelope-open-text"></i>
-              <span>info@flightmantra.com</span>
-            </InfoItem>
-            <InfoItem>
-              <i className="fas fa-map-marked-alt"></i>
-              <span>1000+ Travel partners and 65+ Service cities across India, USA, Canada & UAE</span>
-            </InfoItem>
+          <Flex
+            direction="column"
+            background="#154c79"
+            gap="5rem"
+            padding="2rem"
+            borderRadius="1.5rem"
+          >
+            <Text type="h2" text="Contact Info" size="3.5rem" color="#edfff7" />
 
-            <SocialIcons>
-              <a href="#"><i className="fab fa-facebook-square"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-            </SocialIcons>
+            <Flex direction="column" gap="2rem">
+              <Flex direction="row" gap="2rem">
+                <FaPhoneAlt size={30} color="#edfff7" />
+                <Text size={20} color="#effff7" type="h3" text="+234 703 257 1208" />
+              </Flex>
+              <Flex direction="row" gap="2rem">
+                <MdAlternateEmail size={30} color="#edfff7" />
+                <Text size={20} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
+              </Flex>
+              <Flex direction="row" gap="2rem">
+                <IoLocationSharp size={30} color="#edfff7" />
+                <Text size={20} color="#effff7" type="h3" text="House 7, Adewale Johnson Street, Osogbo, Osun State" />
+              </Flex>
+            </Flex>
+
+            <Grid
+              columns="repeat(4, 1fr)"
+              gap="2.5rem"
+              width="fit-content"
+              align="unset"
+              justify="flex-start"
+              margin="0"
+            >
+              {footerIcons.map((icon) => (
+                <Link href={icon.url} key={icon.id} target="_blank">
+                  {icon.icon}
+                </Link>
+              ))}
+            </Grid>
           </Flex>
         </ContactWrapper>
       </SectionLayout>
