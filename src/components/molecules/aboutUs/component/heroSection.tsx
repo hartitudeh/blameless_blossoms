@@ -6,73 +6,19 @@ import Text from "@/components/atoms/text";
 import Image from "@/components/atoms/image";
 import AboutImg from "../../../../../public/assets/image/imisi.png";
 import Flex from "@/components/atoms/flex";
-// import CoverImg from "../public/assets/image/header-bg.jpg";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 import SectionLayout from "@/components/atoms/sectionLayout";
 import ReusableHeader from "@/components/atoms/reuseableHeader";
-
-// const AboutHeader = styled.div`
-//   position: relative;
-//   width: 100%;
-//   height: 332px;
-
-//   & img {
-//     width: 100%;
-//     object-fit: cover;
-//     height: 300px;
-//   }
-
-//   & h2 {
-//     position: absolute;
-//     top: 55%;
-//     text-transform: uppercase;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     color: #154c79;
-//     width: max-content;
-//     background: ;
-//     text-align: center;
-//     font-weight: 700 !important;
-//     font-size: 48px;
-//     font-style: normal;
-//     font-weight: 700;
-//     width: 25%;
-//     font-size: 54px;
-//     padding: 0px 1rem;
-//     line-height: 1.5em;
-//     text-shadow: 0px 4px 79px rgba(0, 0, 0, 0.25);
-//     border-radius: 5px;
-
-//     @media screen and (max-width: 900px) {
-//       font-size: 24px;
-//       left: 50% !important;
-//       width: 100%;
-//       background: transparent;
-//     }
-//   }
-// `;
-
-// const Overlay = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   // height: 300px;
-//   // background: #06062a94;
-//   background: linear-gradient(
-//     90deg,
-//     rgb(0 0 0 / 10%) 45%,
-//     rgb(0 0 0 / 22%) 55%
-//   );
-//   @media screen and (max-width: 900px) {
-//     background: #06062a94;
-//   }
-// `;
 
 const AboutMeWrapper = styled.div`
   background: #154c79;
   height: fit-content;
   padding: 3rem;
+
+
+  @media (max-width: 900px) {
+    padding: 1.5rem 0rem;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -84,6 +30,8 @@ padding: 2rem;
 
 @media (max-width: 900px) {
     border-radius: 3rem;
+    padding: 0px;
+    box-shadow: none;
   }
 `;
 
@@ -91,20 +39,7 @@ export const AboutPage = () => {
   const { isMobile } = useScreenResolution();
   return (
     <>
-      {/* <AboutHeader
-        style={{
-          height: isMobile ? "160px" : "250px",
-        }}
-      >
-        <Image src={CoverImage} alt="" height={isMobile ? 128 : 250} />
-        <Overlay style={{ height: isMobile ? "128px" : "250px" }} />
-        <Text
-          text="About Me"
-          type="h2"
-          transform="uppercase"
-          styles={{ width: "max-content", fontFamily: "Whyte Inktrap" }}
-        />
-      </AboutHeader> */}
+      
       <ReusableHeader text="About Me" />
 
       <AboutMeWrapper>
@@ -113,9 +48,9 @@ export const AboutPage = () => {
             direction={isMobile ? "column" : "row"}
             justify="space-between"
             styles={{
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1",
-              padding: "2rem",
-              borderRadius: "4rem",
+              boxShadow: isMobile ? "none" : "0 4px 8px rgba(0, 0, 0, 0.1",
+              padding: isMobile ? "1rem" : "2rem",
+              borderRadius: isMobile ? "2rem" : "4rem",
               background: "#fff",
               margin: "rem",
               height: "fit-content",
@@ -261,7 +196,7 @@ They are blessed with two treasured seeds, Isinmioluwa Shalom Imolemide and Ibuk
                 marginRight: "2rem",
                 margin: isMobile ? "0 0 1rem 0" : "auto",
                 position: "relative",
-                bottom: "-39px",
+                bottom: isMobile ? "-28px" : "-39px",
               }}
               src={AboutImg}
               alt="About Me Image"

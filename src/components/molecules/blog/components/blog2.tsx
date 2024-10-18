@@ -8,7 +8,7 @@ import SectionLayout from "@/components/atoms/sectionLayout";
 // Sample Blog Content
 const blogPost = {
   title: "Understanding the Fundamentals of Web Development",
-  author: "John Doe",
+  author: "Imisi Adekoya",
   date: "October 5, 2024",
   content: `
     Web development has been evolving rapidly over the past few years. From the basic HTML, CSS, and JavaScript to modern-day frameworks 

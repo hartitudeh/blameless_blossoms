@@ -40,11 +40,15 @@ const HomePageWrapper = styled.div`
 const HeroImageSection = styled.div`
   border-top-left-radius: 5rem;
   width: 40%;
+  display: flex;
+  position: relative;
+
 
   @media (max-width: 900px) {
-    margin-top: 3rem;
-    height: 400px;
-    left: 25%;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    right: 53%;
     top: 10%;
   }
 
@@ -80,7 +84,6 @@ export const HomeComponent = () => {
             <Image
               src={HomeImgM}
               alt=""
-              // styles={{ position: "relative", left: isMobile ? "1px" : "10px" }}
               height={700}
               width={700}
             />
@@ -90,7 +93,6 @@ export const HomeComponent = () => {
             justify="center"
             gap="2rem"
             margin={isMobile ? "0" : "2rem 0 0 0"}
-            // width="70.1rem"
           >
             <Text
               type="h1"
@@ -148,7 +150,7 @@ export const HomeComponent = () => {
               />
             </Link>
           </Flex>
-          {/* <AbsoluteBox></AbsoluteBox> */}
+
         </Flex>
       </SectionLayout>
     </HomePageWrapper>

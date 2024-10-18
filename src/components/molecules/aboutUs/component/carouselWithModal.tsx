@@ -17,24 +17,24 @@ import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 const cardData: Card[] = [
   {
     id: 1,
-    image: "/assets/image/imisi.jpeg",
-    title: "Card 1 Title",
+    image: "/assets/image/header-bg.jpg",
+    title: "Tracing The Root",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, vero alias! Quas, aliquid quis consectetur voluptatibus dolorem quasi vitae quia.",
-    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
+    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
   },
   {
     id: 2,
-    image: "/assets/image/imisi.jpeg",
-    title: "Card 2 Title",
+    image: "/assets/image/dwelling.jpg",
+    title: "Dwelling",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, vero alias! Quas, aliquid quis consectetur voluptatibus dolorem quasi vitae quia.",
-    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
+    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
   },
   {
     id: 3,
-    image: "/assets/image/imisi.jpeg",
-    title: "Card 3 Title",
+    image: "/assets/image/comrade.jpg",
+    title: "Comrade of Comfort",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, vero alias! Quas, aliquid quis consectetur voluptatibus dolorem quasi vitae quia.",
-    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
+    description2: "lollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkvlollohfbbzbbafbkbfbjbobfbjbf fajbljvbfjlbfljafv jvfbjvjnklnflnlknlnfknlkv jvbjjbfzbjblfbjjlbjfljbjbfljbf bjfbjlbjbjbzjbljbzljfbjlbvjfbvjbfzjzbljzf bfjbvjzfbzjbjbvjbzfjblzjfbljbljzfjbjlbljbjlbjblf bfjvjzbljbvjlbbvjflbjfjlbljvblbvjbvljblzfbljbfjlbzjfblfjlbzfj jbvjfbbzjlvbljbz jvfbvj jznbfjbvzlfzjbfjzjfbzbljbzrnlfz.fvfnlbnlnflznnjknzjnzfnjnlnz fbfjbfjzkjbjfbfhvzfjbkbzjfkjzfkjbzjbfkbczkf "
   },
   // Add more cards as needed
 ];
@@ -45,6 +45,11 @@ const CarouselContainer = styled.div`
   margin: 10rem auto;
   padding: 2rem 0;
   // background: #154c79;
+
+
+  @media screen and (max-width: 900px) {
+    margin: 2rem auto;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -61,8 +66,6 @@ const Card = styled.div`
   flex-direction: column;
   gap: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  // box-shadow: rgb(66 56 56 / 40%) 0px 0px 10px 3px;
-  // transition: transform 0.2s ease;
   cursor: pointer;
   text-align: center;
   align-items: center;
@@ -93,19 +96,25 @@ const CardDescription = styled.p`
 `;
 
 // MUI Modal Custom Style
-const modalStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "50%",
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 4,
-  borderRadius: "10px",
-  maxHeight: "90vh",
-  overflowY: "auto",
-};
+const StyledModalBox = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; // Set default width for mobile
+  max-width: 600px; // Set a maximum width
+  background-color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 16px; // Adjust padding as needed
+  border-radius: 10px;
+  max-height: 95vh;
+  overflow-y: auto;
+
+  @media (min-width: 600px) {
+    width: 50%; // Set width for larger screens
+  }
+`;
+
 
 
 
@@ -206,7 +215,8 @@ export const CarouselWithModal = () => {
 
       {/* Modal to show the card content when clicked */}
       <Modal open={open} onClose={handleClose}>
-        <Box sx={modalStyle}>
+      <StyledModalBox>
+        <Box>
           <IconButton
             aria-label="close"
             onClick={handleClose}
@@ -237,6 +247,7 @@ export const CarouselWithModal = () => {
             </>
           )}
         </Box>
+      </StyledModalBox>
       </Modal>
     </>
   );

@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Tracing the Root",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",
@@ -52,7 +52,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "Dwelling",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",
@@ -72,7 +72,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 3,
     title: "Comrade of Comfort",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",
@@ -92,7 +92,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 4,
     title: "Faith On Every Corner",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",
@@ -112,7 +112,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 5,
     title: "Tracing the Root",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",
@@ -132,7 +132,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 6,
     title: "Dwelling",
-    author: "John Doe",
+    author: "Imisi Adekoya",
   date: "October 5, 2024",
     description:
       "Last month I was in an environment where the pictures attached to this post were taken. My attention was drawn first to some tiny seeds spread over the perimeter of the field enclosing the tree and others. Maroon-coloured seeds, about the size of a tiger nut, occurred in clusters on the tree and also filled the ground. I didn&#39;t notice at first that they were from the tree.",

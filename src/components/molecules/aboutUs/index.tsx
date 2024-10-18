@@ -5,7 +5,7 @@
 // import Testimonials from "@/components/atoms/testimonial";
 import { AboutPage } from "./component/heroSection";
 import { CarouselWithModal } from "./component/carouselWithModal";
-import Testimonials from "@/components/atoms/testimonial";
+
 
 // import AboutTeam from "./component/team";
 
@@ -16,7 +16,7 @@ const AboutUsPage = () => {
     <>
       <AboutPage />
       {/* <AboutTeam /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CarouselWithModal />
       
       <div

@@ -23,6 +23,7 @@ const MobileNav = styled.div`
   width: 100%;
   padding: 0.5rem 1rem 0;
   background: #154c79;
+  border-bottom: 1px solid #fff;
 
   &.scrolled {
     background: #ffffff;
@@ -108,42 +109,42 @@ export default function TemporaryDrawer() {
               style={{ width: "100%" }}
               borderStyle=" solid"
             />
-            <Link href="/jamb-prep">
-              <Text
-                type="h5"
-                text="Jamb coaching center"
-                color="#000000"
-                size="1.6rem"
-                weight={500}
-                font="Whyte Inktrap"
-                styles={{ lineHeight: "2.179rem" }}
-              />
-            </Link>
-            <Divider
-              direction="horizontal"
-              style={{ width: "100%" }}
-              borderStyle=" solid"
-            />
-            <Link href="/college">
-              <Text
-                type="h5"
-                text="ProU College"
-                color="#000000"
-                size="1.6rem"
-                weight={500}
-                font="Whyte Inktrap"
-                styles={{ lineHeight: "2.179rem" }}
-              />
-            </Link>
-            <Divider
-              direction="horizontal"
-              style={{ width: "100%" }}
-              borderStyle=" solid"
-            />
             <Link href="/about-us">
               <Text
                 type="h5"
                 text="About Author"
+                color="#000000"
+                size="1.6rem"
+                weight={500}
+                font="Whyte Inktrap"
+                styles={{ lineHeight: "2.179rem" }}
+              />
+            </Link>
+            <Divider
+              direction="horizontal"
+              style={{ width: "100%" }}
+              borderStyle=" solid"
+            />
+            <Link href="/gallery">
+              <Text
+                type="h5"
+                text="Gallery"
+                color="#000000"
+                size="1.6rem"
+                weight={500}
+                font="Whyte Inktrap"
+                styles={{ lineHeight: "2.179rem" }}
+              />
+            </Link>
+            <Divider
+              direction="horizontal"
+              style={{ width: "100%" }}
+              borderStyle=" solid"
+            />
+            <Link href="/contact">
+              <Text
+                type="h5"
+                text="Contact"
                 color="#000000"
                 size="1.6rem"
                 weight={500}

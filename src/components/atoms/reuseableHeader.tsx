@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Image  from './image';
 import { useScreenResolution } from '@/lib/extentions/hook/useScreenResolution';
-import CoverImage from "/public/assets/image/cover.png";
+import CoverImage from "/public/assets/image/cover.jpg";
 
 
 
@@ -15,7 +15,7 @@ const ReusableHeader: React.FC<ReusableHeaderProps> = ({ text }) => {
   const { isMobile } = useScreenResolution();
 
   return (
-    <HeaderWrapper style={{ height: isMobile ? "160px" : "250px" }}>
+    <HeaderWrapper style={{ height: "fit-content" }}>
       <Image src={CoverImage} alt="" height={isMobile ? 128 : 250} />
       <Overlay style={{ height: isMobile ? "128px" : "250px" }} />
       <HeaderText>{text}</HeaderText>
@@ -43,7 +43,7 @@ const HeaderText = styled.h2`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #154c79;
+  color: #edfff7;
   text-transform: uppercase;
   width: max-content;
   text-align: center;
@@ -55,7 +55,7 @@ const HeaderText = styled.h2`
   border-radius: 5px;
 
   @media screen and (max-width: 900px) {
-    font-size: 24px;
+    font-size: 45px;
     width: 100%;
     background: transparent;
   }
@@ -66,7 +66,8 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, rgb(0 0 0 / 10%) 45%, rgb(0 0 0 / 22%) 55%);
+  // background: linear-gradient(90deg, rgb(0 0 0 / 10%) 45%, rgb(0 0 0 / 22%) 55%);
+  background:  linear-gradient(90deg, rgb(0 0 0 / 67%) 45%, rgb(0 0 0 / 53%) 55%);
 
   @media screen and (max-width: 900px) {
     background: #06062a94;

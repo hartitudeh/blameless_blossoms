@@ -1,5 +1,7 @@
 "use client";
 
+
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../../../../public/assets/image/logo/logo.png";
 import SectionLayout from "@/components/atoms/sectionLayout";
@@ -10,33 +12,48 @@ import Link from "@/components/atoms/link";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 import TemporaryDrawer from "@/components/atoms/drawer";
 
-
-
-// import TemporaryDrawer from "@/component/atom/drawer";
-// import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
-
-const NavbarWrapper = styled.div`
+// Update styled component to support fixed positioning
+const NavbarWrapper = styled.div<{ isFixed: boolean }>`
   background: #154c79;
   padding: 1.9rem 0rem;
   height: 9.2rem;
   width: 100%;
   border-bottom: 1px solid #fff;
+  position: ${({ isFixed }) => (isFixed ? "fixed" : "relative")}; // Fix the navbar
+  top: 0;
+  left: 0;
+  z-index: 1000; // Make sure the navbar stays on top
+  transition: all 0.3s ease-in-out;
 
   @media (max-width: 900px) {
     padding: 1.4rem 0;
+    height: 5.2rem;
+    position: relative; // Keep normal position for mobile
   }
 `;
 
 const Navbar = () => {
   const { isMobile } = useScreenResolution();
+  const [isFixed, setIsFixed] = useState(false);
 
-  // const [drawerOpen, setDrawerOpen] = useState(false);
+  // Use effect to handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
 
-  // const handleDrawerToggle = () => {
-  //   setDrawerOpen(!drawerOpen);
-  // };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <NavbarWrapper>
+    <NavbarWrapper isFixed={isFixed}>
       <SectionLayout>
         {!isMobile ? (
           <Flex justify="space-between" width="100%">
@@ -90,25 +107,6 @@ const Navbar = () => {
                   styles={{ lineHeight: "2.179rem" }}
                 />
               </Link>
-              
-              {/* <Link
-                href="https://app.proueducation.com/login"
-                style={{
-                  background: "#00E785",
-                  padding: "1.6rem 4.8rem",
-                  borderRadius: "4.8rem",
-                }}
-              >
-                <Text
-                  type="p"
-                  text="Apply now"
-                  color="#151515"
-                  size="1.6rem"
-                  weight={600}
-                  font="Open sans"
-                  styles={{ lineHeight: "2.179rem" }}
-                />
-              </Link> */}
             </Flex>
           </Flex>
         ) : (
@@ -120,3 +118,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
