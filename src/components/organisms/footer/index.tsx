@@ -11,7 +11,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { FaEnvelopeOpenText, FaWhatsappSquare } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
-import { IoCall } from "react-icons/io5";
+import { IoCall, IoLocation } from "react-icons/io5";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
@@ -69,29 +69,29 @@ const supports = [
 
 const contacts = [
   {
-    href: "/email",
+    href: "/",
     text: "ayooluwaeadekoya@gmail.com",
     color: "#edfff7",
     icon: <FaEnvelopeOpenText size="2rem" color="#edfff7" />,
   },
   {
-    href: "/careers",
+    href: "/",
     text: " +2348140545090",
     color: "#edfff7",
     icon: <IoCall size="2rem" color="#edfff7" />,
   },
   {
-    href: "/press",
+    href: "/",
     text: "+2347032571208",
     color: "#edfff7",
     icon: <FaWhatsappSquare size="2rem" color="#edfff7" />,
   },
-//   {
-//     href: "/blogs",
-//     text: "Blogs",
-//     color: "#edfff7",
-//     icon: <ImLinkedin size="2rem" color="#edfff7" />,
-//   },
+  {
+    href: "/",
+    text: "No 7, Adewale Johnson Str",
+    color: "#edfff7",
+    icon: <IoLocation size="2rem" color="#edfff7" />,
+  },
 ];
 
 const FooterSection = () => {

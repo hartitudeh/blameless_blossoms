@@ -7,13 +7,14 @@ import styled from "styled-components";
 import ReusableHeader from "@/components/atoms/reuseableHeader";
 import Flex from "@/components/atoms/flex";
 import { FaPhoneAlt } from "react-icons/fa";
-import { MdAlternateEmail } from "react-icons/md";
+import { FaEnvelopeOpenText } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import { Grid } from "@/components/atoms/grid";
 import Link from "@/components/atoms/link";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { ImLinkedin } from "react-icons/im";
+import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 
 // Contact form styles
 const ContactWrapper = styled.div`
@@ -29,7 +30,7 @@ const ContactWrapper = styled.div`
 `;
 
 const ContactForm = styled.form`
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -78,27 +79,28 @@ const SubmitButton = styled.button`
 const footerIcons = [
   {
     id: 1,
-    icon: <BsFacebook size="3rem" color="#edfff7" />,
+    icon: <BsFacebook size="2rem" color="#edfff7" />,
     url: "https://www.facebook.com/AyooluwaAdekoya?mibextid=ZbWKwL",
   },
   {
     id: 2,
-    icon: <BsTwitter size="3rem" color="#edfff7" />,
+    icon: <BsTwitter size="2rem" color="#edfff7" />,
     url: "https://x.com/AyooluwaAdekoya?t=CDCQZDAh4Iz3nnoVlZM6jg&s=08",
   },
   {
     id: 3,
-    icon: <AiFillInstagram size="3rem" color="#edfff7" />,
+    icon: <AiFillInstagram size="2rem" color="#edfff7" />,
     url: "https://www.instagram.com/ayooluwaadekoya?utm_source=qr&igsh=MXZsZTh2ZXU3ODUxYw==",
   },
   {
     id: 4,
-    icon: <ImLinkedin size="3rem" color="#edfff7" />,
+    icon: <ImLinkedin size="2rem" color="#edfff7" />,
     url: "https://ng.linkedin.com/in/ayooluwa-adekoya-32b106193",
   },
 ];
 
 const ContactPage = () => {
+  const { isMobile } = useScreenResolution();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -194,17 +196,17 @@ const ContactPage = () => {
             <Text type="h2" text="Contact Info" size="3.5rem" color="#edfff7" />
 
             <Flex direction="column" gap="2rem">
-              <Flex direction="row" gap="2rem">
-                <FaPhoneAlt size={30} color="#edfff7" />
-                <Text size={20} color="#effff7" type="h3" text="+234 703 257 1208" />
+              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
+                <FaPhoneAlt size={isMobile ? 20 : 30} color="#edfff7" />
+                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="+234 703 257 1208" />
               </Flex>
-              <Flex direction="row" gap="2rem">
-                <MdAlternateEmail size={30} color="#edfff7" />
-                <Text size={20} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
+              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
+                <FaEnvelopeOpenText size={isMobile ? 20 : 30} color="#edfff7" />
+                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
               </Flex>
-              <Flex direction="row" gap="2rem">
-                <IoLocationSharp size={30} color="#edfff7" />
-                <Text size={20} color="#effff7" type="h3" text="House 7, Adewale Johnson Street, Osogbo, Osun State" />
+              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
+                <IoLocationSharp size={isMobile ? 20 : 30} color="#edfff7" />
+                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="No 7, Adewale Johnson Str, Osun State" />
               </Flex>
             </Flex>
 
