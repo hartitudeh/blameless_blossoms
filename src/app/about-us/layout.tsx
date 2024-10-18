@@ -1,6 +1,6 @@
 // import Footer from "@/component/organisms/footer";
 // import Footer from "@/components/organisms/footer";
-import FooterSection from "@/components/organisms/footer/index2";
+import FooterSection from "@/components/organisms/footer";
 import Navbar from "@/components/organisms/navbar";
 
 
