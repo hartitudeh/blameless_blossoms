@@ -7,7 +7,6 @@ import SectionLayout from "@/components/atoms/sectionLayout"; // Assuming you ha
 import Flex from "@/components/atoms/flex";
 import Text from "@/components/atoms/text";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
-import DOMPurify from "dompurify";
 
 // Define the BlogPost interface
 interface BlogPost {
@@ -241,18 +240,18 @@ const BlogPage = () => {
     setOpen(true);
   };
 
-  // const handleSideContentClick = (content: SideContent) => {
-  //   setFullContent(
-  //     (prev) => `${prev}\n\n---\n\n${content.title}:\n${content.content}`
-  //   );
-  // };
-
   const handleSideContentClick = (content: SideContent) => {
-    const sanitizedSideContent = DOMPurify.sanitize(
-      `${content.title}:\n${content.content}`
+    setFullContent(
+      (prev) => `${prev}\n\n---\n\n${content.title}:\n${content.content}`
     );
-    setFullContent((prev) => `${prev}\n\n---\n\n${sanitizedSideContent}`);
   };
+
+  // const handleSideContentClick = (content: SideContent) => {
+  //   const sanitizedSideContent = DOMPurify.sanitize(
+  //     `${content.title}:\n${content.content}`
+  //   );
+  //   setFullContent((prev) => `${prev}\n\n---\n\n${sanitizedSideContent}`);
+  // };
 
   const handleClose = () => {
     setOpen(false);
