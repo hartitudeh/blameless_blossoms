@@ -2,7 +2,7 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "rule-name": "off",
-    "no-console": "warn",
+    "no-console": "off",
     "react/no-danger": "off"
   }
 }

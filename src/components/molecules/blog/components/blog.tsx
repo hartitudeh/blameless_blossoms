@@ -7,6 +7,7 @@ import SectionLayout from "@/components/atoms/sectionLayout"; // Assuming you ha
 import Flex from "@/components/atoms/flex";
 import Text from "@/components/atoms/text";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
+import DOMPurify from "dompurify";
 
 // Define the BlogPost interface
 interface BlogPost {
@@ -214,7 +215,7 @@ const modalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: window.innerWidth <= 900 ? "90%" : "50%",
+  width: "90%",
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 1.5,
@@ -229,11 +230,6 @@ const BlogPage = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [fullContent, setFullContent] = useState("");
 
-  // const handleOpen = (post: BlogPost) => {
-  //   setSelectedPost(post);
-  //   setFullContent(post.content.join("\n\n\n")); // Join content array into a single string with breaks
-  //   setOpen(true);
-  // };
 
   const handleOpen = (post: BlogPost) => {
     setSelectedPost(post);
@@ -245,10 +241,17 @@ const BlogPage = () => {
     setOpen(true);
   };
 
+  // const handleSideContentClick = (content: SideContent) => {
+  //   setFullContent(
+  //     (prev) => `${prev}\n\n---\n\n${content.title}:\n${content.content}`
+  //   );
+  // };
+
   const handleSideContentClick = (content: SideContent) => {
-    setFullContent(
-      (prev) => `${prev}\n\n---\n\n${content.title}:\n${content.content}`
+    const sanitizedSideContent = DOMPurify.sanitize(
+      `${content.title}:\n${content.content}`
     );
+    setFullContent((prev) => `${prev}\n\n---\n\n${sanitizedSideContent}`);
   };
 
   const handleClose = () => {
@@ -323,21 +326,6 @@ const BlogPage = () => {
           ))}
         </SideContentWrapper>
       </Flex>
-
-      {/* Modal for full blog content */}
-      {/* <Modal open={open} onClose={handleClose}>
-        <Box sx={modalStyle}>
-          {selectedPost && (
-            <>
-              <Typography variant="h4">{selectedPost.title}</Typography>
-              <Typography variant="body1" paragraph>
-                {fullContent}
-              </Typography>
-              <Image src={selectedPost.image} alt={selectedPost.title} styles={{ width: "100%", height: "auto" }} />
-            </>
-          )}
-        </Box>
-      </Modal> */}
 
       <Modal open={open} onClose={handleClose}>
         <Box sx={modalStyle}>
