@@ -5,7 +5,7 @@
 // import Testimonials from "@/components/atoms/testimonial";
 import { AboutPage } from "./component/heroSection";
 import { CarouselWithModal } from "./component/carouselWithModal";
-import { BookFlipComponent } from "@/components/atoms/bookSlide";
+// import { BookFlipComponent } from "@/components/atoms/bookSlide";
 
 
 // import AboutTeam from "./component/team";
@@ -16,7 +16,7 @@ const AboutUsPage = () => {
   return (
     <>
       <AboutPage />
-      <BookFlipComponent />
+      {/* <BookFlipComponent /> */}
       {/* <Testimonials /> */}
       <CarouselWithModal />
       
