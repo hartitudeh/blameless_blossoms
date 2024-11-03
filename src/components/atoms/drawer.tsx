@@ -96,7 +96,7 @@ export default function TemporaryDrawer() {
             <Link href="/">
               <Text
                 type="h5"
-                text="Homepage"
+                text="Home"
                 color="#000000"
                 size="1.6rem"
                 weight={500}
@@ -109,10 +109,21 @@ export default function TemporaryDrawer() {
               style={{ width: "100%" }}
               borderStyle=" solid"
             />
+            {/* <Link href="/about-us">
+              <Text
+                type="h5"
+                text="About"
+                color="#000000"
+                size="1.6rem"
+                weight={500}
+                font="Whyte Inktrap"
+                styles={{ lineHeight: "2.179rem" }}
+              />
+            </Link> */}
             <Link href="/about-us">
               <Text
                 type="h5"
-                text="About Author"
+                text="Author"
                 color="#000000"
                 size="1.6rem"
                 weight={500}
@@ -125,10 +136,10 @@ export default function TemporaryDrawer() {
               style={{ width: "100%" }}
               borderStyle=" solid"
             />
-            <Link href="/gallery">
+            <Link href="/">
               <Text
                 type="h5"
-                text="Gallery"
+                text="Relative Articles"
                 color="#000000"
                 size="1.6rem"
                 weight={500}
