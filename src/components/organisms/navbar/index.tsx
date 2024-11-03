@@ -74,10 +74,10 @@ const Navbar = () => {
                   styles={{ lineHeight: "2.179rem" }}
                 />
               </Link>
-              <Link href="/about-us">
+              <Link href="/">
                 <Text
                   type="p"
-                  text="About Author"
+                  text="About"
                   color="#edfff7"
                   size="1.6rem"
                   weight={600}
@@ -85,10 +85,21 @@ const Navbar = () => {
                   styles={{ lineHeight: "2.179rem" }}
                 />
               </Link>
-              <Link href="/gallery">
+              <Link href="/about-us">
                 <Text
                   type="p"
-                  text="Gallery"
+                  text="Author"
+                  color="#edfff7"
+                  size="1.6rem"
+                  weight={600}
+                  font="Open sans"
+                  styles={{ lineHeight: "2.179rem" }}
+                />
+              </Link>
+              <Link href="/article">
+                <Text
+                  type="p"
+                  text="Related Articles"
                   color="#edfff7"
                   size="1.6rem"
                   weight={600}
