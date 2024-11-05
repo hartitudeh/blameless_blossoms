@@ -7,6 +7,7 @@ import SectionLayout from "@/components/atoms/sectionLayout"; // Assuming you ha
 import Flex from "@/components/atoms/flex";
 import Text from "@/components/atoms/text";
 import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
+import SideConent from "./sideContent";
 
 // Define the BlogPost interface
 interface BlogPost {
@@ -19,13 +20,6 @@ interface BlogPost {
   date: string;
 }
 
-// Define the SideContent interface
-interface SideContent {
-  id: number;
-  title: string;
-  content: string; // This remains a single string
-  image: string;
-}
 
 // Sample data for blog posts
 const blogPosts: BlogPost[] = [
@@ -152,31 +146,6 @@ const blogPosts: BlogPost[] = [
   // Add more blog posts as needed, ensuring each content field is an array of strings
 ];
 
-// Sample data for side content
-const sideContent: SideContent[] = [
-  {
-    id: 1,
-    title: "Tracing the Root",
-    content:
-      "Full content of Tracing the Root. This can include more details about the topic.",
-    image: "/assets/image/aug.png",
-  },
-  {
-    id: 2,
-    title: "Tracing the Root",
-    content:
-      "Full content of Tracing the Root. This can include more details about the topic.",
-    image: "/assets/image/fad.png",
-  },
-  {
-    id: 3,
-    title: "Tracing the Root",
-    content:
-      "Full content of Tracing the Root. This can include more details about the topic.",
-    image: "/assets/image/bilal.png",
-  },
-  // Add more side content as needed
-];
 
 // Styled Components
 const BlogPostWrapper = styled.div`
@@ -184,10 +153,6 @@ const BlogPostWrapper = styled.div`
   padding: 1rem;
 `;
 
-const SideContentWrapper = styled.div`
-  flex: 0 0 25%;
-  padding: 1rem;
-`;
 
 const PostCard = styled.div`
   border: 1px solid #ccc;
@@ -232,26 +197,13 @@ const BlogPage = () => {
 
   const handleOpen = (post: BlogPost) => {
     setSelectedPost(post);
-    // Create a string that includes HTML for line breaks and horizontal rule
     const contentWithBreaks = post.content.join(
       "<hr style='margin: 5px 0; border: 0px;' />"
     );
-    setFullContent(contentWithBreaks); // Use HTML for breaks
+    setFullContent(contentWithBreaks); 
     setOpen(true);
   };
 
-  const handleSideContentClick = (content: SideContent) => {
-    setFullContent(
-      (prev) => `${prev}\n\n---\n\n${content.title}:\n${content.content}`
-    );
-  };
-
-  // const handleSideContentClick = (content: SideContent) => {
-  //   const sanitizedSideContent = DOMPurify.sanitize(
-  //     `${content.title}:\n${content.content}`
-  //   );
-  //   setFullContent((prev) => `${prev}\n\n---\n\n${sanitizedSideContent}`);
-  // };
 
   const handleClose = () => {
     setOpen(false);
@@ -269,9 +221,10 @@ const BlogPage = () => {
         styles={{
           lineHeight: isMobile ? "2.56rem" : "6.06rem",
           fontFamily: "Whyte Inktrap",
+          display: isMobile ? "none" : "block",
         }}
       />
-      <Flex justify="space-between" direction={isMobile ? "column" : "row"}>
+      <Flex justify="space-between" direction={isMobile ? "column-reverse" : "row"}>
         <BlogPostWrapper>
           {blogPosts.map((post) => (
             <PostCard key={post.id} onClick={() => handleOpen(post)}>
@@ -305,25 +258,19 @@ const BlogPage = () => {
           ))}
         </BlogPostWrapper>
 
-        <SideContentWrapper>
-          <Typography style={{ fontSize: "2.5rem", fontFamily: "Whyte Inktrap" }} variant="h6">Related Articles</Typography>
-          {sideContent.map((content) => (
-            <PostCard
-              key={content.id}
-              onClick={() => handleSideContentClick(content)}
-            >
-              <Flex justify="flex-start" gap="1rem" width="100%" align="center" >
-              <Image
-                src={content.image}
-                alt={content.title}
-                width={50}
-                styles={{ width: "10%", height: "auto" }}
-              />
-              <Typography style={{width: "80%", fontWeight: "bold", fontSize: "2rem",}} variant="h6">{content.title}</Typography>
-              </Flex>
-            </PostCard>
-          ))}
-        </SideContentWrapper>
+        <Text
+        type="h1"
+        text="My Blogs"
+        weight={700}
+        size={isMobile ? "3rem" : "5.052rem"}
+        styles={{
+          lineHeight: isMobile ? "2.56rem" : "6.06rem",
+          fontFamily: "Whyte Inktrap",
+          display: isMobile ? "block" : "none",
+        }}
+      />
+
+        <SideConent />
       </Flex>
 
       <Modal open={open} onClose={handleClose}>

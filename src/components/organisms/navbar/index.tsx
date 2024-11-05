@@ -85,17 +85,7 @@ const Navbar = () => {
                   styles={{ lineHeight: "2.179rem" }}
                 />
               </Link>
-              <Link href="/article">
-                <Text
-                  type="p"
-                  text="Related Articles"
-                  color="#edfff7"
-                  size="1.6rem"
-                  weight={600}
-                  font="Open sans"
-                  styles={{ lineHeight: "2.179rem" }}
-                />
-              </Link>
+              
               <Link href="/contact">
                 <Text
                   type="p"

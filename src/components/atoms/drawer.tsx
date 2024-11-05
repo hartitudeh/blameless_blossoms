@@ -136,22 +136,7 @@ export default function TemporaryDrawer() {
               style={{ width: "100%" }}
               borderStyle=" solid"
             />
-            <Link href="/">
-              <Text
-                type="h5"
-                text="Relative Articles"
-                color="#000000"
-                size="1.6rem"
-                weight={500}
-                font="Whyte Inktrap"
-                styles={{ lineHeight: "2.179rem" }}
-              />
-            </Link>
-            <Divider
-              direction="horizontal"
-              style={{ width: "100%" }}
-              borderStyle=" solid"
-            />
+            
             <Link href="/contact">
               <Text
                 type="h5"

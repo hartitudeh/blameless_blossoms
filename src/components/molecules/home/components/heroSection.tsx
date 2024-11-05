@@ -272,29 +272,6 @@ export const HomeComponent = () => {
   );
 };
 
-// const FlipbookWrapper = styled.div`
-//   margin-top: 15vh;
-//   margin-bottom: 5vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 1rem;
-// `;
-
-// const FlipbookTitle = styled.h3`
-//   color: #ffa200;
-//   text-align: center;
-//   font-size: 2.5vw;
-//   font-family: "Poppins", sans-serif;
-//   font-weight: 900;
-//   line-height: 75px;
-//   text-shadow: 1px 3px 0px #373737;
-
-//   @media (max-width: 768px) {
-//     font-size: 5vw;
-//   }
-// `;
-
 const ContentWrapper = styled.div`
   padding: 20px;
   font-size: 1rem;
