@@ -42,6 +42,12 @@ const Flex = styled.div<{ justify?: string; gap?: string; width?: string; align?
   align-items: ${(props) => props.align || "center"};
 `;
 
+
+// const Image = styled.img<{ width?: number }>`
+//   width: ${(props) => (props.width ? `${props.width}px` : "auto")};
+//   height: auto;
+// `;
+
 const ModalWrapper = styled(Box)`
   position: absolute;
   top: 50%;
@@ -62,7 +68,7 @@ const sideContent: SideContent[] = [
     title: "Daughter Of Confidence",
     content: "Full content of Tracing the Root. This can include more details about the topic.",
     image: "/assets/image/aug.png",
-    url: "https://theshallowtalesreview.com.ng/daughter-of-confidence/", 
+    url: "https://theshallowtalesreview.com.ng/daughter-of-confidence/", // Provide URL for iframe
   },
   {
     id: 2,
@@ -76,22 +82,22 @@ const sideContent: SideContent[] = [
     title: "Ode To My Father",
     content: "Full content of further reading. This can include more details about the topic.",
     image: "/assets/image/dilemma.jpeg",
-    url: "https://christapoet.com/2021/12/28/what-began-as-a-dilemma/",
+    url: "https://selar.co/em5w?currency=RWF",
   },
   {
     id: 4,
     title: "Restored By The God Of My Mother",
     content: "Full content of further reading. This can include more details about the topic.",
     image: "/assets/image/redeem.jpeg",
-    url: "https://christapoet.com/2021/11/24/redemption-memo/",
+    url: "https://issuu.com/craigruhl/docs/faith_on_every_corner_-_may_2022",
   },
-  // {
-  //   id: 5,
-  //   title: "Biography",
-  //   content: "Full content of further reading. This can include more details about the topic.",
-  //   image: "/assets/image/article.png",
-  //   url: "https://parousiamagazine.wordpress.com/2023/05/05/like-calves-released-from-the-stall-is-a-contemporary-christian-poem-written-by-ayooluwa-e-adekoya-imisi/",
-  // },
+  {
+    id: 5,
+    title: "Like Calves Released From The Stall",
+    content: "Full content of further reading. This can include more details about the topic.",
+    image: "/assets/image/article.png",
+    url: "https://parousiamagazine.wordpress.com/2022/12/25/like-calves-released-from-the-stall-by-ayooluwa-e-adekoya-imisi-joy-to-the-world-issue-14-parousia/",
+  },
 ];
 
 export const SideConent = () => {
