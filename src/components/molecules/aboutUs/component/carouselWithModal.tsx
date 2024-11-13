@@ -74,6 +74,10 @@ const Card = styled.div`
   align-items: center;
   width: 100%;
   height: 400px;
+
+  @media (max-width: 900px) {
+    height: 430px; 
+  }
 `;
 
 // Card Image
@@ -98,25 +102,7 @@ const CardDescription = styled.p`
   color: #17f7de;
 `;
 
-// MUI Modal Custom Style
-// const StyledModalBox = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 90%; // Set default width for mobile
-//   max-width: 600px; // Set a maximum width
-//   background-color: #fff;
-//   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-//   padding: 16px; // Adjust padding as needed
-//   border-radius: 10px;
-//   max-height: 95vh;
-//   overflow-y: auto;
 
-//   @media (min-width: 600px) {
-//     width: 50%; // Set width for larger screens
-//   }
-// `;
 
 const ModalWrapper = styled(Box)`
   position: absolute;

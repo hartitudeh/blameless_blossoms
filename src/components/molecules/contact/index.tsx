@@ -23,9 +23,11 @@ const ContactWrapper = styled.div`
   gap: 3rem;
   flex-direction: row;
   padding: 5rem 0;
+  height: 60vh;
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -196,17 +198,44 @@ const ContactPage = () => {
             <Text type="h2" text="Contact Info" size="3.5rem" color="#edfff7" />
 
             <Flex direction="column" gap="2rem">
-              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
+              <Flex
+                direction="row"
+                gap={isMobile ? "1rem" : "2rem"}
+                align="center"
+              >
                 <FaPhoneAlt size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="+234 703 257 1208" />
+                <Text
+                  size={isMobile ? 14 : 18}
+                  color="#effff7"
+                  type="h3"
+                  text="+234 703 257 1208"
+                />
               </Flex>
-              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
+              <Flex
+                direction="row"
+                gap={isMobile ? "1rem" : "2rem"}
+                align="center"
+              >
                 <FaEnvelopeOpenText size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
+                <Text
+                  size={isMobile ? 14 : 18}
+                  color="#effff7"
+                  type="h3"
+                  text="ayooluwaeadekoya@gmail.com"
+                />
               </Flex>
-              <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
-                <IoLocationSharp size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="12B, Bowen University Teaching Hospital Seminary road Ogbomoso Oyo State." />
+              <Flex
+                direction="row"
+                gap={isMobile ? "1rem" : "2rem"}
+                align="center"
+              >
+                <IoLocationSharp size={isMobile ? 25 : 30} color="#edfff7" />
+                <Text
+                  size={isMobile ? 14 : 18}
+                  color="#effff7"
+                  type="h3"
+                  text="12B, Bowen University T.H.S Road Ogbomoso Oyo State."
+                />
               </Flex>
             </Flex>
 
