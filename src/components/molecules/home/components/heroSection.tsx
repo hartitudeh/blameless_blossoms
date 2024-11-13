@@ -145,7 +145,7 @@ export const HomeComponent = () => {
           >
             <Text
               type="h1"
-              text="BLAMELESS BLOSSOM"
+              text="BLAMELESS BLOSSOMS"
               weight={500}
               size={isMobile ? "4.63rem" : "5.734rem"}
               styles={{
