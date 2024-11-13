@@ -33,7 +33,7 @@ const ProfileCard = () => {
           src={Left}
           alt="Left aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 270 : 300}
+          width={isMobile ? 375 : 300}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "left",
@@ -150,7 +150,7 @@ const ProfileCard = () => {
           src={Right}
           alt="Right aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 270 : 300}
+          width={isMobile ? 375 : 300}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "right",
