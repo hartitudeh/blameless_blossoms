@@ -172,7 +172,7 @@ export const HomeComponent = () => {
               }}
               width={isMobile ? "100%" : "64.8rem"}
             />
-            
+
             <Link href="" onClick={handleOpenModal}>
               <Text
                 type="p"
@@ -201,11 +201,25 @@ export const HomeComponent = () => {
           <Button
             onClick={handleCloseModal}
             disableRipple
-            style={{ position: "absolute", top: 10, right: isMobile ? -7 : 10, color: "crimson" }}
+            style={{
+              position: "absolute",
+              top: 10,
+              right: isMobile ? -7 : 10,
+              color: "crimson",
+            }}
           >
             <IoClose size={20} />
           </Button>
-          <Typography variant="h3" align="center" gutterBottom style={{marginBottom: isMobile ? "1.5rem" : "0.35rem", fontWeight: isMobile ? "700" : "500", fontSize: isMobile ? "2rem" : "3rem"}}>
+          <Typography
+            variant="h3"
+            align="center"
+            gutterBottom
+            style={{
+              marginBottom: isMobile ? "1.5rem" : "0.35rem",
+              fontWeight: isMobile ? "700" : "500",
+              fontSize: isMobile ? "2rem" : "3rem",
+            }}
+          >
             Blameless Blossoms
           </Typography>
           <Swiper
@@ -219,49 +233,31 @@ export const HomeComponent = () => {
               justifyContent: "space-between",
             }}
           >
-            {/* {pages.map((page, index) => (
+            {pages.map((page, index) => (
               <SwiperSlide key={index}>
                 <ContentWrapper>
-                  <Typography
-                    variant="body2"
-                    style={{
-                      fontSize: "1.5rem",
-                      color: "#222",
-                      fontFamily: "Whyte Inktrap",
-                      fontWeight: "200",
-                      lineHeight: "20px",
-                    }}
-                  >
-                    {page.content}
-                  </Typography>
+                  {page.content.map((text, textIndex) =>
+                    text ? (
+                      <Typography
+                        key={textIndex}
+                        variant="body2"
+                        style={{
+                          fontSize: "1.5rem",
+                          color: "#222",
+                          fontFamily: "Whyte Inktrap",
+                          fontWeight: "200",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        {text}
+                      </Typography>
+                    ) : (
+                      <Separator key={textIndex} />
+                    )
+                  )}
                 </ContentWrapper>
               </SwiperSlide>
-            ))} */}
-            {pages.map((page, index) => (
-        <SwiperSlide key={index}>
-          <ContentWrapper>
-            {page.content.map((text, textIndex) =>
-              text ? (
-                <Typography
-                  key={textIndex}
-                  variant="body2"
-                  style={{
-                    fontSize: '1.5rem',
-                    color: '#222',
-                    fontFamily: 'Whyte Inktrap',
-                    fontWeight: '200',
-                    lineHeight: '20px',
-                  }}
-                >
-                  {text}
-                </Typography>
-              ) : (
-                <Separator key={textIndex} />
-              )
-            )}
-          </ContentWrapper>
-        </SwiperSlide>
-      ))}
+            ))}
           </Swiper>
           <div
             style={{
