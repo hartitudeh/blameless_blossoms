@@ -3,6 +3,7 @@ import { Modal, Box, Typography, Button } from "@mui/material";
 import styled from "styled-components";
 import Image from "@/components/atoms/image";
 import { IoClose } from "react-icons/io5";
+import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
 
 // Define the content interface
 interface SideContent {
@@ -100,6 +101,7 @@ const sideContent: SideContent[] = [
 ];
 
 export const SideConent = () => {
+  const { isMobile } = useScreenResolution();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedUrl, setSelectedUrl] = useState("");
 
@@ -122,7 +124,7 @@ export const SideConent = () => {
         <PostCard key={content.id} onClick={() => handleOpenModal(content.url)}>
           <Flex justify="flex-start" gap="1rem" width="100%" align="center">
             <Image src={content.image} alt={content.title} width={50} styles={{ width: "10%", height: "auto", borderRadius: "50%", }} />
-            <Typography style={{ width: "80%", fontWeight: "bold", fontSize: "2rem" }} variant="h6">
+            <Typography style={{ width: "80%", fontWeight: "bold", fontSize: isMobile ? "1.7rem" : "2rem" }} variant="h6">
               {content.title}
             </Typography>
           </Flex>

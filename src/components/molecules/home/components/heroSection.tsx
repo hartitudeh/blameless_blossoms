@@ -59,7 +59,7 @@ const HeroImageSection = styled.div`
     margin-top: 2rem;
     width: 100%;
     height: auto;
-    right: 38%;
+    right: 34%;
     top: 10%;
   }
 
@@ -78,16 +78,36 @@ const HeroImageSection = styled.div`
 
 const pages = [
   {
-    content:
-      "That they may be blameless children in this perverse world' has been the longing of the One who always wants the children to come to Him. Blossom is symbolic of a phase of full maturity such as when a child has become a grown-up. Blameless connotes a state without stain or spot. For a long time, we have comfortably thought blameless children refers to spiritually or morally pure ones only. No. There's more- biologically, emotionally, mentally, and the list overflows. But how can blameless buds morph into blameless blossoms? Bud is a metaphor for a little child who is still developing and has not come to full maturity.",
+    content: [
+      "That they may be blameless children in this perverse world' has been the longing of the One who always wants the children to come to Him.",
+      "",
+      "Blossom is symbolic of a phase of full maturity such as when a child has become a grown-up. Blameless connotes a state without stain or spot. For a long time, we have comfortably thought blameless children refers to spiritually or morally pure ones only. No. There's more- biologically, physically, emotionally, socially, and mentally.",
+      "",
+      "But how can blameless buds morph into blameless blossoms?",
+      "",
+      "Bud is a metaphor for a little child who is still developing and has not come to full maturity. Blameless Blossoms is a blog that uses a memoir style of creative nonfiction to weave stories around the intersection between childhood and adulting.",
+    ],
   },
   {
-    content:
-      "Through the panacea of the pen and inspiration of the ink, children are built and rebuilt through adults who will learn and unlearn. It presents us with the awareness and aid on how, as adults, we should numb ourselves to some norms that have become acceptable by society in the area of raisinlg children. Many of these, though with good intentions, have produced unwholesome blossoms who may fit into the society's standard but are broken elsewhere, overtly or covertly. At other times, they end up with anti-social behaviours or debilitating physical, mental, or emotional crisis and the same society that built them blames and denounces them",
+    content: [
+      "It seeks to shed light on and supply solutions to the multifaceted plights of children using a system-level thinking approach that challenges adults to understand children in their quest to help them have abundant life. Through the panacea of the pen and inspiration of the ink, children are built and rebuilt by adults who will learn and unlearn.",
+      "",
+      "It presents us with the awareness and aid on how, as adults, we should numb ourselves to some norms that have become acceptable by society in the area of raising children. Many of these, though with good intentions, have produced unwholesome blossoms who may fit into the society's standard but are broken elsewhere, overtly or covertly. At other times, they end up with anti-social behaviours or debilitating physical, mental, or emotional crisis and the same society that built them blames and denounces them.",
+    ],
   },
   {
-    content:
-      "Imagine a surgeon damages a vital blood vessel in a bid to salvage a hemorrhage in a less vital vessel. We ought not to violate them in a bid to care for or train them. When the mission is good but the method is wrong, the result will not only be barren but our children may still be on the barred list despite our efforts. They can still be affected by diseases and other ill fates that should not assail them.To bridge such a brackish outcome, this blog presents a curative approach to parenting by focusing on how we, as adults, need to work on ourselves as we raise children. It harnesses an approach that begins with us, healing us of our ignorance, deceptions, hurts, pains, and trauma that we failed to reconcile with until we were grown-ups or those we are going through currently; the wholesome life we must be restored into and the renewed mind we must walk daily in diverse areas. Until we return to blameless buds ourselves, we cannot raise blameless blossoms. 'Except we become converted into little children (pure, innocent, whole), we cannot raise the kingdom-kind of children.",
+    content: [
+      "Imagine a surgeon damages a vital blood vessel in a bid to salvage a hemorrhage in a less vital vessel. We ought not to violate them in the process of caring for or training them. When the mission is good but the method is wrong, the result will not only be barren but our children may still be on the barred list despite our efforts. They can still be affected by diseases and other ill fates that should not assail them. ",
+      "",
+      "To bridge such brackish outcome, this blog presents a curative approach to parenting by focusing on how we, as adults, need to work on ourselves as we raise children. It harnesses a perspective that begins with us, healing us of our ignorance, deceptions, hurts, pains, and trauma that we failed to reconcile with until we were grown-ups or those we are going through currently; the wholesome life we must be restored into and the renewed mind we must operate daily in diverse areas.",
+    ],
+  },
+  {
+    content: [
+      "Until we return to blameless buds, we cannot raise blameless blossoms. Except we become converted into little children (pure, innocent, whole), we cannot raise the kingdom-kind of children. This can only be with the help of the KING because with man, these things seem impossible. Nurturing without injuring is possible. It is possible!",
+      "",
+      "Ayooluwa Adekoya",
+    ],
   },
 ];
 
@@ -96,7 +116,6 @@ export const HomeComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const swiperRef = React.useRef<Swiper | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
-
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -142,7 +161,7 @@ export const HomeComponent = () => {
 
             <Text
               type="p"
-              text="Blossom is symbolic of a phase of full maturity such as when a child has become a grown-up."
+              text="Blameless Blossoms is a curative approach to parenting that focuses on how we, as adults, need to work on ourselves as we raise children. It harnesses a perspective that begins with us, healing us of our ignorance, deceptions, hurts, pains, and trauma that we failed to reconcile with until we were grown-ups or those we are going through currently; the wholesome life we must be restored into and the renewed mind we must operate daily in diverse areas."
               color="#17F7DE"
               font="Open Sans"
               size={isMobile ? "1.8rem" : "2rem"}
@@ -153,19 +172,7 @@ export const HomeComponent = () => {
               }}
               width={isMobile ? "100%" : "64.8rem"}
             />
-            <Text
-              type="p"
-              text="Blameless connotes a state without stain or spot. For a long time, we have comfortably thought blameless children refers to spiritually or morally pure ones only. No. There's more- biologically, emotionally, mentally, and the list overflows."
-              color="#17F7DE"
-              font="Open Sans"
-              size={isMobile ? "1.8rem" : "2rem"}
-              weight={400}
-              styles={{
-                lineHeight: isMobile ? "2.732rem" : "2.507rem",
-                margin: "0px",
-              }}
-              width={isMobile ? "100%" : "64.8rem"}
-            />
+            
             <Link href="" onClick={handleOpenModal}>
               <Text
                 type="p"
@@ -194,18 +201,16 @@ export const HomeComponent = () => {
           <Button
             onClick={handleCloseModal}
             disableRipple
-            style={{ position: "absolute", top: 10, right: 10 }}
+            style={{ position: "absolute", top: 10, right: isMobile ? -7 : 10, color: "crimson" }}
           >
             <IoClose size={20} />
           </Button>
-          <Typography variant="h3" align="center" gutterBottom>
+          <Typography variant="h3" align="center" gutterBottom style={{marginBottom: isMobile ? "1.5rem" : "0.35rem", fontWeight: isMobile ? "700" : "500", fontSize: isMobile ? "2rem" : "3rem"}}>
             Blameless Blossoms
           </Typography>
           <Swiper
-            // ref={swiperRef}
             modules={[Navigation]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            // navigation
             style={{
               width: "100%",
               height: "fit-content",
@@ -214,7 +219,7 @@ export const HomeComponent = () => {
               justifyContent: "space-between",
             }}
           >
-            {pages.map((page, index) => (
+            {/* {pages.map((page, index) => (
               <SwiperSlide key={index}>
                 <ContentWrapper>
                   <Typography
@@ -224,13 +229,39 @@ export const HomeComponent = () => {
                       color: "#222",
                       fontFamily: "Whyte Inktrap",
                       fontWeight: "200",
+                      lineHeight: "20px",
                     }}
                   >
                     {page.content}
                   </Typography>
                 </ContentWrapper>
               </SwiperSlide>
-            ))}
+            ))} */}
+            {pages.map((page, index) => (
+        <SwiperSlide key={index}>
+          <ContentWrapper>
+            {page.content.map((text, textIndex) =>
+              text ? (
+                <Typography
+                  key={textIndex}
+                  variant="body2"
+                  style={{
+                    fontSize: '1.5rem',
+                    color: '#222',
+                    fontFamily: 'Whyte Inktrap',
+                    fontWeight: '200',
+                    lineHeight: '20px',
+                  }}
+                >
+                  {text}
+                </Typography>
+              ) : (
+                <Separator key={textIndex} />
+              )
+            )}
+          </ContentWrapper>
+        </SwiperSlide>
+      ))}
           </Swiper>
           <div
             style={{
@@ -272,6 +303,12 @@ export const HomeComponent = () => {
   );
 };
 
+const Separator = styled.hr`
+  border: 0;
+  // border-top: 0px solid #ddd;
+  margin: 10px 0;
+`;
+
 const ContentWrapper = styled.div`
   padding: 20px;
   font-size: 1rem;
@@ -286,7 +323,7 @@ const ModalWrapper = styled(Box)`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 500px;
+  max-width: 750px;
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 10px;

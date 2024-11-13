@@ -61,11 +61,7 @@ export const AboutPage = () => {
               direction="column"
               gap="0.1"
               styles={{
-                // paddingLeft: "20px",
-
-                // margin: "2rem 0",
                 padding: "2rem",
-                // overflow: "scroll",
                 height: "100%",
                 overflowY: "scroll"
               }}

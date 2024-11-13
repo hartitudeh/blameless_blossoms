@@ -198,15 +198,15 @@ const ContactPage = () => {
             <Flex direction="column" gap="2rem">
               <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
                 <FaPhoneAlt size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="+234 703 257 1208" />
+                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="+234 703 257 1208" />
               </Flex>
               <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
                 <FaEnvelopeOpenText size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
+                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="ayooluwaeadekoya@gmail.com" />
               </Flex>
               <Flex direction="row" gap={isMobile ? "1rem" : "2rem"} align="center">
                 <IoLocationSharp size={isMobile ? 20 : 30} color="#edfff7" />
-                <Text size={isMobile ? 14 : 20} color="#effff7" type="h3" text="No 7, Adewale Johnson Str, Osun State" />
+                <Text size={isMobile ? 14 : 18} color="#effff7" type="h3" text="12B, Bowen University Teaching Hospital Seminary road Ogbomoso Oyo State." />
               </Flex>
             </Flex>
 

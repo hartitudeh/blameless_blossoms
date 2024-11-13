@@ -16,8 +16,8 @@ const ReusableHeader: React.FC<ReusableHeaderProps> = ({ text }) => {
 
   return (
     <HeaderWrapper style={{ height: "fit-content" }}>
-      <Image src={CoverImage} alt="" height={isMobile ? 128 : 250} />
-      <Overlay style={{ height: isMobile ? "128px" : "250px" }} />
+      <Image src={CoverImage} alt="" height={isMobile ? 128 : 150} />
+      <Overlay style={{ height: isMobile ? "128px" : "150px" }} />
       <HeaderText>{text}</HeaderText>
     </HeaderWrapper>
   );

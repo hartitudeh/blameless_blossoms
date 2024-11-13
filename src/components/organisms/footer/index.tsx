@@ -1,17 +1,17 @@
 "use client";
 
 import Flex from "@/components/atoms/flex";
-import { Grid } from "@/components/atoms/grid";
-import Image from "@/components/atoms/image";
+// import { Grid } from "@/components/atoms/grid";
+// import Image from "@/components/atoms/image";
 import Link from "@/components/atoms/link";
-import SectionLayout from "@/components/atoms/sectionLayout";
-import Text from "@/components/atoms/text";
-import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
-import { AiFillInstagram } from "react-icons/ai";
-import { BsFacebook, BsTwitter } from "react-icons/bs";
-import { FaEnvelopeOpenText, FaWhatsappSquare } from "react-icons/fa";
-import { ImLinkedin } from "react-icons/im";
-import { IoCall, IoLocation } from "react-icons/io5";
+// import SectionLayout from "@/components/atoms/sectionLayout";
+// import Text from "@/components/atoms/text";
+// import { useScreenResolution } from "@/lib/extentions/hook/useScreenResolution";
+// import { AiFillInstagram } from "react-icons/ai";
+// import { BsFacebook, BsTwitter } from "react-icons/bs";
+// import { FaEnvelopeOpenText, FaWhatsappSquare } from "react-icons/fa";
+// import { ImLinkedin } from "react-icons/im";
+// import { IoCall, IoLocation } from "react-icons/io5";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
@@ -25,81 +25,81 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-const footerIcons = [
-  {
-    id: 1,
-    icon: <BsFacebook size="2rem" color="#edfff7" />,
-    url: "https://www.facebook.com/AyooluwaAdekoya?mibextid=ZbWKwL",
-  },
-  {
-    id: 2,
-    icon: <BsTwitter size="2rem" color="#edfff7" />,
-    url: "https://x.com/AyooluwaAdekoya?t=CDCQZDAh4Iz3nnoVlZM6jg&s=08",
-  },
-  {
-    id: 3,
-    icon: <AiFillInstagram size="2rem" color="#edfff7" />,
-    url: "https://www.instagram.com/ayooluwaadekoya?utm_source=qr&igsh=MXZsZTh2ZXU3ODUxYw==",
-  },
-  {
-    id: 4,
-    icon: <ImLinkedin size="2rem" color="#edfff7" />,
-    url: "https://ng.linkedin.com/in/ayooluwa-adekoya-32b106193",
-  },
+// const footerIcons = [
+//   {
+//     id: 1,
+//     icon: <BsFacebook size="2rem" color="#edfff7" />,
+//     url: "https://www.facebook.com/AyooluwaAdekoya?mibextid=ZbWKwL",
+//   },
+//   {
+//     id: 2,
+//     icon: <BsTwitter size="2rem" color="#edfff7" />,
+//     url: "https://x.com/AyooluwaAdekoya?t=CDCQZDAh4Iz3nnoVlZM6jg&s=08",
+//   },
+//   {
+//     id: 3,
+//     icon: <AiFillInstagram size="2rem" color="#edfff7" />,
+//     url: "https://www.instagram.com/ayooluwaadekoya?utm_source=qr&igsh=MXZsZTh2ZXU3ODUxYw==",
+//   },
+//   {
+//     id: 4,
+//     icon: <ImLinkedin size="2rem" color="#edfff7" />,
+//     url: "https://ng.linkedin.com/in/ayooluwa-adekoya-32b106193",
+//   },
   
-];
+// ];
 
-const recentBooks = [
-  "The New Me",
-  "Cast Your Net",
-  "Keep Pushing",
-  "Alone With My Thought",
-];
-const usefulLinks = [
-  { text: "About Me", href: "/waitlist", color: "#edfff7" },
-  { text: "Gallery", href: "/ai-guide", color: "#edfff7" },
-  { text: "FAQs", href: "/faqs", color: "#edfff7" },
-];
+// const recentBooks = [
+//   "The New Me",
+//   "Cast Your Net",
+//   "Keep Pushing",
+//   "Alone With My Thought",
+// ];
+// const usefulLinks = [
+//   { text: "About Me", href: "/waitlist", color: "#edfff7" },
+//   { text: "Gallery", href: "/ai-guide", color: "#edfff7" },
+//   { text: "FAQs", href: "/faqs", color: "#edfff7" },
+// ];
 
-const supports = [
-  { href: "/contact", text: "Become a Partner", color: "#edfff7" },
-  { href: "/terms-conditions", text: "Donate", color: "#edfff7" },
-  { href: "/privacy-policy", text: "Privacy Policy", color: "#edfff7" },
-];
+// const supports = [
+//   { href: "/contact", text: "Become a Partner", color: "#edfff7" },
+//   { href: "/terms-conditions", text: "Donate", color: "#edfff7" },
+//   { href: "/privacy-policy", text: "Privacy Policy", color: "#edfff7" },
+// ];
 
-const contacts = [
-  {
-    href: "/",
-    text: "ayooluwaeadekoya@gmail.com",
-    color: "#edfff7",
-    icon: <FaEnvelopeOpenText size="2rem" color="#edfff7" />,
-  },
-  {
-    href: "/",
-    text: " +2348140545090",
-    color: "#edfff7",
-    icon: <IoCall size="2rem" color="#edfff7" />,
-  },
-  {
-    href: "/",
-    text: "+2347032571208",
-    color: "#edfff7",
-    icon: <FaWhatsappSquare size="2rem" color="#edfff7" />,
-  },
-  {
-    href: "/",
-    text: "No 7, Adewale Johnson Str",
-    color: "#edfff7",
-    icon: <IoLocation size="2rem" color="#edfff7" />,
-  },
-];
+// const contacts = [
+//   {
+//     href: "/",
+//     text: "ayooluwaeadekoya@gmail.com",
+//     color: "#edfff7",
+//     icon: <FaEnvelopeOpenText size="2rem" color="#edfff7" />,
+//   },
+//   {
+//     href: "/",
+//     text: " +2348140545090",
+//     color: "#edfff7",
+//     icon: <IoCall size="2rem" color="#edfff7" />,
+//   },
+//   {
+//     href: "/",
+//     text: "+2347032571208",
+//     color: "#edfff7",
+//     icon: <FaWhatsappSquare size="2rem" color="#edfff7" />,
+//   },
+//   {
+//     href: "/",
+//     text: "12B, Bowen University Teaching Hospital Seminary road Ogbomoso Oyo state, Nigeria",
+//     color: "#edfff7",
+//     icon: <IoLocation size="2rem" color="#edfff7" />,
+//   },
+// ];
 
 const FooterSection = () => {
-  const { isMobile } = useScreenResolution();
+  // const { isMobile } = useScreenResolution();
   const currentYear = new Date().getFullYear();
   return (
     <FooterWrapper>
-      <SectionLayout
+      {/* <SectionLayout
         margin="0 auto"
         padding={isMobile ? "0rem 1.5rem 0 1.5rem" : "1rem"}
       >
@@ -246,8 +246,8 @@ const FooterSection = () => {
             </div>
           </Flex>
         </Flex>
-      </SectionLayout>
-      <hr style={{ margin: "3rem 0 1rem" }} />
+      </SectionLayout> */}
+      {/* <hr style={{ margin: "3rem 0 1rem" }} /> */}
 
       <Flex direction="column" align="center" justify="center" padding="1rem 0">
         <CopyrightText>
