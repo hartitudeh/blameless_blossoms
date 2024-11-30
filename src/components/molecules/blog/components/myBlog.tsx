@@ -9,7 +9,11 @@ import SectionLayout from "@/components/atoms/sectionLayout";
 import Text from "@/components/atoms/text";
 
 const Content = styled.div`
-  overflow: hidden; /* Clear the floating images */
+  overflow: hidden; 
+  
+  @media (max-width: 900px){
+  margin-bottom: 5rem;
+  }
 `;
 
 const ProfileCard = () => {
@@ -22,7 +26,7 @@ const ProfileCard = () => {
         text="Tracing The Root"
         weight={600}
         styles={{
-          fontSize: "2.5rem",
+          fontSize: isMobile ? "3.5rem" :  "2.5rem",
           textAlign: "center",
           margin: ".5rem auto 3.5rem",
           fontFamily: "Whyte Inktrap",
@@ -33,13 +37,15 @@ const ProfileCard = () => {
           src={Left}
           alt="Left aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 375 : 300}
+          width={isMobile ? 326 : 300}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "left",
             margin: isMobile ? "10px 0" : "0 15px 10px 0",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             width: isMobile ? "100%" : "200px",
+            borderBottomLeftRadius: isMobile ? "0px" : "8px",
+            borderBottomRightRadius: isMobile ? "0px" : "8px",
           }}
         />
         <Text
@@ -150,13 +156,15 @@ const ProfileCard = () => {
           src={Right}
           alt="Right aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 375 : 300}
+          width={isMobile ? 326 : 300}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "right",
             margin: isMobile ? "10px 0" : "0 0 10px 15px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             width: isMobile ? "100%" : "200px",
+            borderBottomLeftRadius: isMobile ? "0px" : "8px",
+            borderBottomRightRadius: isMobile ? "0px" : "8px",
           }}
         />
 

@@ -49,11 +49,12 @@ const Footer = () => {
 
       <Flex direction="column" align="center" justify="center" padding="1rem 0">
         <CopyrightText>
-          © {currentYear} All Rights Reserved @ Nectar Word 
+          © {currentYear} All Rights Reserved @ Blameless Blossoms
+         <span style={{color: "#edfff7", fontSize: "2rem"}}> Ayooluwa E. Adekoya Ìmísí </span> 
           <br />
-          <span>
             With ❤️ by &nbsp;
-            <Link href="https://hartitudeh.github.io" target="_blank" color="#d4b48d">
+          <span>
+            <Link href="https://hartitudeh.github.io" target="_blank" color="#d4b48de6" style={{fontWeight: "bold"}}>
               Hartitudeh Tech Solutions
             </Link>
           </span>
@@ -67,8 +68,8 @@ export default Footer;
 
 const CopyrightText = styled.p`
   text-align: center;
-  font-size: 2rem;
-  color: #edfff7;
+  font-size: 1.8rem;
+  color: grey;
 `;
 
 

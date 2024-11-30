@@ -29,9 +29,10 @@ border-radius: 3rem 0 0 3rem;
 padding: 2rem;
 
 @media (max-width: 900px) {
-    border-radius: 3rem;
+    border-radius: 1rem 1rem 0 0;
     padding: 0px;
-    box-shadow: none;
+    // box-shadow: none;
+
   }
 `;
 
@@ -50,9 +51,9 @@ export const AboutPage = () => {
             styles={{
               boxShadow: isMobile ? "none" : "0 4px 8px rgba(0, 0, 0, 0.1",
               padding: isMobile ? "1rem" : "2rem",
-              borderRadius: isMobile ? "2rem" : "4rem",
+              borderRadius: isMobile ? "1rem" : "4rem",
               background: "#fff",
-              margin: "rem",
+              margin: "5rem auto",
               height: "fit-content",
             }}
           >
@@ -68,7 +69,7 @@ export const AboutPage = () => {
             >
               <Text
                 styles={{
-                  textAlign: "justify",
+                  textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -85,7 +86,7 @@ export const AboutPage = () => {
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -98,7 +99,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -110,7 +111,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -122,7 +123,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -134,7 +135,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -146,7 +147,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -158,7 +159,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
@@ -170,7 +171,7 @@ She also serves as a team lead/director, member of the board, advisor, or mentor
               />
               <Text
                 styles={{
-                  textAlign: "justify",
+                   textAlign: isMobile ? "left" : "justify",
                   color: "#5d5d5d",
                   fontWeight: 400,
                   fontSize: "2rem",
