@@ -54,7 +54,7 @@ const Footer = () => {
           <br />
             With ❤️ by &nbsp;
           <span>
-            <Link href="https://hartitudeh.github.io" target="_blank" color="#d4b48de6" style={{fontWeight: "bold"}}>
+            <Link href="https://hartitudeh.vercel.app" target="_blank" color="#d4b48de6" style={{fontWeight: "bold"}}>
               Hartitudeh Tech Solutions
             </Link>
           </span>
