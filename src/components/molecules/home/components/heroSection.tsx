@@ -216,8 +216,10 @@ export const HomeComponent = () => {
             gutterBottom
             style={{
               marginBottom: isMobile ? "1.5rem" : "0.35rem",
-              fontWeight: isMobile ? "700" : "500",
-              fontSize: isMobile ? "2rem" : "3rem",
+              fontWeight: isMobile ? "700" : "900",
+              fontSize: isMobile ? "2rem" : "3.5rem",
+              textDecoration: "underline",
+              textTransform: "uppercase",
             }}
           >
             Blameless Blossoms
