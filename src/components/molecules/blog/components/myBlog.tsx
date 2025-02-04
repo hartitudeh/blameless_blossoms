@@ -49,7 +49,7 @@ House 3, Bolatito Mary Ayinde House, opposite Total filling station, Randa, Ogbo
 070 694 382 64, 070 325 712 08 <br />
 fortifiersnexus@gmail.com</p> <br /><br />
 
-<p style={{color: "#766d6d", marginBottom: "15rem", fontSize: isMobile ? "1.3rem" : "1.5rem"}}><em><strong>No material in this issue should be otherwise reproduced without prior permission from the publishers.</strong></em></p>
+<p style={{color: "#766d6d", marginBottom: isMobile ? "5rem" : "15rem", fontSize: isMobile ? "1.3rem" : "1.5rem"}}><em><strong>No material in this issue should be otherwise reproduced without prior permission from the publishers.</strong></em></p>
 
 
       <Content>
@@ -57,13 +57,13 @@ fortifiersnexus@gmail.com</p> <br /><br />
           src={Left}
           alt="Left aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 326 : 300}
+          width={isMobile ? 360 : 500}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "left",
             margin: isMobile ? "10px 0" : "0 15px 10px 0",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            // width: isMobile ? "100%" : "200px",
+            width: isMobile ? "100% !important" : "300px !important",
             borderBottomLeftRadius: isMobile ? "0px" : "8px",
             borderBottomRightRadius: isMobile ? "0px" : "8px",
           }}
@@ -153,7 +153,7 @@ Like the illustration, whatever fills the face of the earth as seeds-good or bad
           src={Right}
           alt="Right aligned content"
           height={isMobile ? 270 : 300}
-          width={isMobile ? 326 : 300}
+          width={isMobile ? 360 : 500}
           styles={{
             borderRadius: "8px",
             float: isMobile ? "none" : "right",
