@@ -261,6 +261,7 @@ export const HomeComponent = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          
           <div
             style={{
               display: "flex",

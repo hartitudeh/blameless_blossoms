@@ -69,7 +69,7 @@ export default Footer;
 const CopyrightText = styled.p`
   text-align: center;
   font-size: 1.8rem;
-  color: grey;
+  color: #dedede;
 `;
 
 
