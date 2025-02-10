@@ -16,21 +16,37 @@ import { IoClose } from "react-icons/io5";
 
 // Data for the cards
 const cardData: Card[] = [
+  // {
+  //   id: 1,
+  //   image: "/assets/image/world.jpg",
+  //   title: "Joy Of The World",
+  //   url: "https://parousiamagazine.wordpress.com/2022/12/25/like-calves-released-from-the-stall-by-ayooluwa-e-adekoya-imisi-joy-to-the-world-issue-14-parousia/",
+  //   description:
+  //     "Before you arrived, we were charged With law-breaking Offenses for which we were imprisoned Behind the bars of guilt Wallowing in woes, swallowing reproach We were destined for destruction.",
+  //   },
+  // {
+  //   id: 2,
+  //   image: "/assets/image/faith.jpg",
+  //   title: "Faith On Every Corner",
+  //   url: "https://issuu.com/craigruhl/docs/faith_on_every_corner_-_may_2022",
+  //   description:
+  //     "I urge, then, first of all, that petitions, prayers, intercession, and thanksgiving be made for all people for kings and all those in authority that we may live peaceful and quiet lives in all godliness and holiness.",
+  //   },
   {
     id: 1,
-    image: "/assets/image/world.jpg",
-    title: "Joy Of The World",
-    url: "https://parousiamagazine.wordpress.com/2022/12/25/like-calves-released-from-the-stall-by-ayooluwa-e-adekoya-imisi-joy-to-the-world-issue-14-parousia/",
+    image: "/assets/image/comrade.jpg",
+    title: "Comrade of Comfort",
+    url: "https://selar.co/em5w?currency=RWF",
     description:
-      "Before you arrived, we were charged With law-breaking Offenses for which we were imprisoned Behind the bars of guilt Wallowing in woes, swallowing reproach We were destined for destruction.",
+      "Comrade of Comfort, a poetry collection by Ayooluwa E. Adekoya Ìmísí, published by Nectar Publishers is a collection of inspirational poems that inspire devotion and comfort. Rich in literary ingredients yet simple and easy to understand, it promises to be a life-changing journey.",
     },
   {
     id: 2,
-    image: "/assets/image/faith.jpg",
-    title: "Faith On Every Corner",
-    url: "https://issuu.com/craigruhl/docs/faith_on_every_corner_-_may_2022",
+    image: "/assets/image/comrade.jpg",
+    title: "Comrade of Comfort",
+    url: "https://selar.co/em5w?currency=RWF",
     description:
-      "I urge, then, first of all, that petitions, prayers, intercession, and thanksgiving be made for all people for kings and all those in authority that we may live peaceful and quiet lives in all godliness and holiness.",
+      "Comrade of Comfort, a poetry collection by Ayooluwa E. Adekoya Ìmísí, published by Nectar Publishers is a collection of inspirational poems that inspire devotion and comfort. Rich in literary ingredients yet simple and easy to understand, it promises to be a life-changing journey.",
     },
   {
     id: 3,
